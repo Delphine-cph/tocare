@@ -1,0 +1,2 @@
+class ReplacementsController < ApplicationController
+end

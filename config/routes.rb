@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashoard'
   resources :users
   resources :patients
-  resources :replacements, only: %[new create]
+  resources :replacements, only: %w[new create]
 end

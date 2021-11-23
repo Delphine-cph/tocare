@@ -1,0 +1,19 @@
+<div class="form-container">
+<div class="formulaire">
+<%= form_tag new_replacement_path, method:"get" do %>
+
+  <div>
+    <h3>Tu souhaites te faire remplacer ?</h3>
+    <label>
+      <%= date_field("demande", "start_date") %>
+      Date de début
+    </label>
+    <label>
+      <%= date_field("demande", "end_date") %>
+      Date de fin
+    </label>
+  </div>
+
+  <%= submit_tag "Je Valide !", class: "btn btn-primary" %>
+<% end %>
+</div>

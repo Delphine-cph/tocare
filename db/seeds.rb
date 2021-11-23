@@ -61,3 +61,5 @@ Patient.create!(
 #   user_id: 13,
 #   day: 16/12/2021
 # )
+
+puts "done!"

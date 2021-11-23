@@ -1,5 +1,4 @@
-<div class="navbar navbar-lewagon">
-  <div class="d-flex justify-content-between">
+<div class="navbar navbar-lewagon justify-content-between">
       <%= link_to "#", class: "navbar-brand" do %>
         <h4 class="tocare"><%= image_tag "logo.png", class: "avatar" %> ToCare</h4>
       <% end %>
@@ -10,8 +9,6 @@
       <% else %>
         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
       <% end %>
-    </div>
-  </div>
 </div>
 
 <%# <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

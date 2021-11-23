@@ -16,6 +16,8 @@ class ReplacementsController < ApplicationController
     @user = current_user
     @user.patients
     @patients.each do |patient|
+     Remplacement.new
+    end
     @replacement = Replacement.new(replacement_params)
     @replacement.user = current_user
     @replacement.patient = patient.id

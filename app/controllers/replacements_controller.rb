@@ -1,7 +1,7 @@
 class ReplacementsController < ApplicationController
 
   def index
-    @replacement = 
+    @replacement = Replacement.all
   end
 
 end

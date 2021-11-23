@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :adeli_number, presence: true
   validates :arrondissement, presence: true
   has_many :cares
+  has_many :patients, through: :cares
   has_many :replacements
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

@@ -1,12 +1,25 @@
+.tocare {
+  color: #4a6ac5;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+  flex-grow: 1;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.logo {
+  position: relative;
+  margin-top: -16px;
 }

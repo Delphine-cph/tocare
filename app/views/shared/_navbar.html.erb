@@ -4,7 +4,7 @@
       <% end %>
       <% if user_signed_in? %>
         <%= link_to "#", class: "navbar-brand" do %>
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar logo" %>
+          <%= image_tag current_user.photo, class: "avatar logo" %>
         <% end %>
       <% else %>
         <%= link_to "Login", new_user_session_path, class: "nav-link" %>

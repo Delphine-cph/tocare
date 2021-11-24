@@ -1,3 +1,26 @@
-<%= @user.photo %>
+<div class="profile-card pt-6 px-3">
+  <div class="profile-card-header">
+    <%= image_tag "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1634632987/we8o2sbodrvtwm3nrtla.jpg" %>
+    <div class="profile-card-info">
+      <h2><%= @user.last_name.upcase %> <%= @user.first_name.capitalize %></h2>
+      <p>IDE depuis 3 mois</p>
+    </div>
+  </div>
+  <ul class="">
+    <% 5.times do %>
+      <li class="list-in-line"><i class="fas fa-star"></i></li>
+    <% end %>
+  </ul>
 
-<h1><%= @user.last_name.capitalize @user.first_name.capitalize %></h1>
+  <h3 class="address">Localisation: <%= @user.arrondissement %></h3>
+  <div class="profile-card-description">
+    Bla BLa Description mon diplôme ma fac gna gna gna etc
+  </div>
+  <p class="">Soins:</p>
+  <div class="profile-card-tags">
+    <div class="tag-soins">Pansements</div>
+    <div class="tag-soins">Toilette</div>
+    <div class="tag-soins">Perfusions</div>
+  </div>
+
+</div>

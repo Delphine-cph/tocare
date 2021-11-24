@@ -18,7 +18,8 @@ User.create!(
   first_name: "delphine",
   last_name: "cph",
   adeli_number: "1234EFT",
-  arrondissement: "13011"
+  arrondissement: "13011",
+  photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-192"
 )
 
 User.create!(
@@ -27,7 +28,8 @@ User.create!(
   first_name: "mathieu",
   last_name: "Rmn",
   adeli_number: "1290TFT",
-  arrondissement: "13001"
+  arrondissement: "13001",
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-72"
 )
 
 Patient.create!(
@@ -50,11 +52,12 @@ Patient.create!(
   telephone_family: "0645456545"
 )
 
-# replacement = Replacement.new(
-# start_date: "12/11/2021",
-# end_date: "12/12/2021",
-#  user: "1234",
-#  patient: "9876")
+replacement = Replacement.new(
+start_date: "12/11/2021",
+end_date: "12/12/2021",
+ user: "1234",
+ patient: "9876")
+
 
 # Care.create!(
 #   patient_id: 4,

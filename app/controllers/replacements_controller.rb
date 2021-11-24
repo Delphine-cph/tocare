@@ -19,7 +19,7 @@ class ReplacementsController < ApplicationController
     @user = current_user
     @user.patients
     @patients.each do |patient|
-     Remplacement.new
+     Remplacement.create(replacement_params)
     end
     @replacement = Replacement.new(replacement_params)
     @replacement.user = current_user

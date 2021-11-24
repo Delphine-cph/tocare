@@ -3,7 +3,7 @@ class ReplacementsController < ApplicationController
   def index
     # @user.where(@replacement.start_date >= user.start_date && @replacement.end_date <= @user.end_date)
     @user = User.first
-    Remplacement.where("start_date >= ?", @user.start_date)
+    Replacement.where("start_date >= ?", @user.start_date)
                 .where("end_date <= ?", @user.end_date)
   end
 
@@ -15,22 +15,28 @@ class ReplacementsController < ApplicationController
 
   def create
     # 1. recuperer tous les patients du current user
-    # 2. pour chaque patient je creer un replacement
+
     @user = current_user
-    @user.patients
+    @patients = @user.patients
+  # 2. stocker dans une variable date de debut et de fin
+  # 3. for each care recuperer date puis trouver toutes les dates
+  raise
     @patients.each do |patient|
-     Remplacement.create(replacement_params)
+      replacement = Replacement.new(replacement_params)
+      replacement.user = current_user
+      replacement.patient = patient.id
+
+      users.cares
+
+      replacement.save
     end
-    @replacement = Replacement.new(replacement_params)
-    @replacement.user = current_user
-    @replacement.patient = patient.id
-    @replacement.save
+    redirect_to root_path
 
     flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'
   end
 
   private
-  def remplacement_params
-    params.require(:replacement).permit(:user_id, :patient_id, :start_date, :end_date)
+  def replacement_params
+    params.require(:replacement).permit(:start_date, :end_date)
   end
 end

@@ -11,6 +11,13 @@ class ReplacementsController < ApplicationController
     # end
   end
 
+  def status_accepted
+    @replacement.mark('remplacement accepté')
+  end
+
+  def status_decline
+    @replacement.mark('remplacement refusé')
+  end
 
   def new
      @replacement = Replacement.new

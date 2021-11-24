@@ -19,18 +19,15 @@ class ReplacementsController < ApplicationController
     # 1. recuperer tous les patients du current user
     @user = current_user
     @patients = @user.patients
+    @patients.each do |patient|
+      Remplacement.new(replacement_params)
+      @replacement.patient = patient
+      @replacement.user = current_user
+      @replacement.save
+    end
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates
-  raise
-    @patients.each do |patient|
-      replacement = Replacement.new(replacement_params)
-      replacement.user = current_user
-      replacement.patient = patient.id
-
-      users.cares
-
-      replacement.save
-    end
+ 
     redirect_to root_path
 
     flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'

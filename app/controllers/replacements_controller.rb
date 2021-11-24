@@ -25,14 +25,14 @@ class ReplacementsController < ApplicationController
     @user = current_user
     @patients = @user.patients
     @patients.each do |patient|
-      Remplacement.new(replacement_params)
-      @replacement.patient = patient
-      @replacement.user = current_user
-      @replacement.save
+    replacement = Replacement.new(replacement_params)
+      replacement.patient = patient
+      replacement.user = current_user
+      replacement.save
     end
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates
- 
+
     redirect_to root_path
 
     flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'

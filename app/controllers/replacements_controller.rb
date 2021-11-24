@@ -28,7 +28,7 @@ class ReplacementsController < ApplicationController
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates
 
-    redirect_to root_path
+    redirect_to replacements_path
 
     flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'
   end

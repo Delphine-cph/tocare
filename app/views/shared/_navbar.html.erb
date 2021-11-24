@@ -1,9 +1,13 @@
 <div class="navbar navbar-lewagon justify-content-between">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <h4 class="tocare"><%= image_tag "logo.png", class: "avatar" %> ToCare</h4>
       <% end %>
       <% if user_signed_in? %>
+<<<<<<< HEAD
         <%= link_to "#", class: "navbar-brand" do %>
+=======
+        <%= link_to root_path, class: "navbar-brand" do %>
+>>>>>>> 5b20bdb6fbeb370a7fddfd32cddc0a4399bb5ea8
           <%= image_tag current_user.photo, class: "avatar logo" %>
         <% end %>
       <% else %>

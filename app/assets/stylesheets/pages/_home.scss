@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+
+.home-msg {
+  padding: 16px 24px;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.home-msg-success {
+  border: 2px solid #1EDD88;
+}
+
+.home-msg-warning {
+  border: 2px solid #FFC65A;
+}
+
+.home-msg-danger {
+  border: 2px solid #FD1015;
+}

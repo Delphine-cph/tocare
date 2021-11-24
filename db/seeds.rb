@@ -52,10 +52,4 @@ Patient.create!(
   telephone_family: "0645456545"
 )
 
-# Care.create!(
-#   patient_id: 4,
-#   user_id: 13,
-#   day: 16/12/2021
-# )
-
 puts "done!"

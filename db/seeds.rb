@@ -74,4 +74,24 @@ care = Care.create!(
   day: "Mardi"
 )
 
+Chatroom.create!(
+  name: "Actualités"
+)
+
+Chatroom.create!(
+  name: "National"
+)
+
+Chatroom.create!(
+  name: "Régional"
+)
+
+Chatroom.create!(
+  name: "IDEL 75011"
+)
+
+Chatroom.create!(
+  name: "Entraide"
+)
+
 puts "done!"

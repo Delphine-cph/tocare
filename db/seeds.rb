@@ -13,7 +13,6 @@ Care.destroy_all
 User.destroy_all
 Patient.destroy_all
 
-
 user1 = User.create!(
   email: "delphine@gmail.com",
   password: "delphine",

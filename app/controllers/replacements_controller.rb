@@ -1,5 +1,4 @@
 class ReplacementsController < ApplicationController
-
   def index
     # @user.where(@replacement.start_date >= user.start_date && @replacement.end_date <= @user.end_date)
 
@@ -10,18 +9,14 @@ class ReplacementsController < ApplicationController
     # if @replacements.empty?
     #   flash[:notice] = 'Pas de correspondance trouvée'
     # end
-
   end
-
 
   def new
-     @replacement = Replacement.new
+    @replacement = Replacement.new
   end
-
 
   def create
     # 1. recuperer tous les patients du current user
-
     @user = current_user
     @patients = @user.patients
   # 2. stocker dans une variable date de debut et de fin

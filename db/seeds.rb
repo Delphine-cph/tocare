@@ -12,7 +12,8 @@ User.destroy_all
 Patient.destroy_all
 Replacement.destroy_all
 
-User.create!(
+
+user1 = User.create!(
   email: "delphine@gmail.com",
   password: "delphine",
   first_name: "delphine",
@@ -22,7 +23,7 @@ User.create!(
   photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-192"
 )
 
-User.create!(
+user2 = User.create!(
   email: "mathieu@gmail.com",
   password: "mathieu",
   first_name: "mathieu",
@@ -32,7 +33,7 @@ User.create!(
   photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-72"
 )
 
-Patient.create!(
+patient1 = Patient.create!(
   first_name: "Paul",
   last_name: "Sossa",
   soin: "Douche",
@@ -42,7 +43,7 @@ Patient.create!(
   telephone_family: "0645454545"
 )
 
-Patient.create!(
+patient2 = Patient.create!(
   first_name: "Georgette",
   last_name: "Soler",
   soin: "Injection s/c",
@@ -50,6 +51,20 @@ Patient.create!(
   adress: "56 bd de la valbarelle 13011",
   telephone_number: "0678945875",
   telephone_family: "0645456545"
+)
+
+Replacement.create!(
+  start_date: Date.parse("20/11/2021"),
+  end_date: Date.parse("27/11/2021"),
+  user: user1,
+  patient: patient1
+)
+
+Replacement.create!(
+  start_date: Date.parse("19/11/2021"),
+  end_date: Date.parse("26/11/2021"),
+  user: user2,
+  patient: patient2
 )
 
 puts "done!"

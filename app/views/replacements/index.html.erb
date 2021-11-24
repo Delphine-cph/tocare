@@ -1,4 +1,8 @@
 <h1>Replacements</h1>
 <% @replacements.each do |replacement| %>
-<%= replacement.email %>
+<%= replacement.start_date %>
+<%= replacement.end_date %>
+<%= replacement.patient.first_name %>
+<%= replacement.patient.last_name %>
+<%= replacement.patient.address %>
 <% end %>

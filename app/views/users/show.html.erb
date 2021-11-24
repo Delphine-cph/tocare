@@ -1,6 +1,6 @@
 <div class="profile-card pt-6 px-3">
   <div class="profile-card-header">
-    <%= image_tag "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1634632987/we8o2sbodrvtwm3nrtla.jpg" %>
+    <%= image_tag @user.photo %>
     <div class="profile-card-info">
       <h2><%= @user.last_name.upcase %> <%= @user.first_name.capitalize %></h2>
       <p>IDE depuis 3 mois</p>

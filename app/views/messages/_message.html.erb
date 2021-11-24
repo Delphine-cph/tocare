@@ -1,0 +1,7 @@
+<div id="message-<%= message.id %>">
+  <small>
+    <strong><%= message.user.first_name.capitalize %></strong>
+    <i>- <%= l message.created_at, format: :short %></i>
+  </small>
+  <p><%= message.content %></p>
+</div>

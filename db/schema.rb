@@ -25,6 +25,22 @@ ActiveRecord::Schema.define(version: 2021_11_24_145911) do
     t.index ["user_id"], name: "index_cares_on_user_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -70,6 +86,8 @@ ActiveRecord::Schema.define(version: 2021_11_24_145911) do
 
   add_foreign_key "cares", "patients"
   add_foreign_key "cares", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "replacements", "patients"
   add_foreign_key "replacements", "users"
 end

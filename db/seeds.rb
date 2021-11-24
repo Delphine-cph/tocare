@@ -10,6 +10,7 @@ require "open-uri"
 puts 'cleaning db'
 Replacement.destroy_all
 Care.destroy_all
+Message.destroy_all
 User.destroy_all
 Patient.destroy_all
 

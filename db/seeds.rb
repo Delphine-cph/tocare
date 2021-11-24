@@ -8,9 +8,10 @@
 require "open-uri"
 
 puts 'cleaning db'
+Replacement.destroy_all
+Care.destroy_all
 User.destroy_all
 Patient.destroy_all
-Replacement.destroy_all
 
 user1 = User.create!(
   email: "delphine@gmail.com",
@@ -71,7 +72,5 @@ care = Care.create!(
   user: user1,
   day: "Mardi"
 )
-
-
 
 puts "done!"

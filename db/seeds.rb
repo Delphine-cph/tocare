@@ -50,11 +50,12 @@ Patient.create!(
   telephone_family: "0645456545"
 )
 
-# replacement = Replacement.new(
-# start_date: "12/11/2021",
-# end_date: "12/12/2021",
-#  user: "1234",
-#  patient: "9876")
+replacement = Replacement.new(
+start_date: "12/11/2021",
+end_date: "12/12/2021",
+ user: "1234",
+ patient: "9876")
+
 
 # Care.create!(
 #   patient_id: 4,

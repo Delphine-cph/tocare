@@ -56,8 +56,11 @@ end_date: "12/12/2021",
  user: "1234",
  patient: "9876")
 
-Care.create!(
-  patient_id: 4,
-  user_id: 13,
-  day: 16/12/2021
-)
+
+# Care.create!(
+#   patient_id: 4,
+#   user_id: 13,
+#   day: 16/12/2021
+# )
+
+puts "done!"

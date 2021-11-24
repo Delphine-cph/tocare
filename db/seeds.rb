@@ -71,7 +71,6 @@ care = Care.create!(
   user: user1,
   day: "Mardi"
 )
-)
 
 
 

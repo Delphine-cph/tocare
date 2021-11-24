@@ -1,0 +1,7 @@
+<h1>Fils de discussion</h1>
+
+<div class="channel channel-border">
+  <% @chatrooms.each do |chatroom| %>
+    <p><i class="fas fa-hashtag"></i><%= link_to chatroom.name.capitalize, chatroom_path(chatroom) %></p>
+  <% end %>
+</div>

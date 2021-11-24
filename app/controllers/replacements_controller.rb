@@ -21,14 +21,13 @@ class ReplacementsController < ApplicationController
     # 1. recuperer tous les patients du current user
     # 2. pour chaque patient je creer un replacement
     @user = current_user
-    @user.patients
+    @patients = @user.patients
     @patients.each do |patient|
-     Remplacement.create(replacement_params)
+      Remplacement.new(replacement_params)
+      @replacement.patient = patient
+      @replacement.user = current_user
+      @replacement.save
     end
-    @replacement = Replacement.new(replacement_params)
-    @replacement.user = current_user
-    @replacement.patient = patient.id
-    @replacement.save
 
     flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'
   end

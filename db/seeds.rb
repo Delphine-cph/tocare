@@ -8,9 +8,10 @@
 require "open-uri"
 
 puts 'cleaning db'
+Replacement.destroy_all
+Care.destroy_all
 User.destroy_all
 Patient.destroy_all
-Replacement.destroy_all
 
 
 user1 = User.create!(
@@ -53,18 +54,24 @@ patient2 = Patient.create!(
   telephone_family: "0645456545"
 )
 
-Replacement.create!(
-  start_date: Date.parse("20/11/2021"),
-  end_date: Date.parse("27/11/2021"),
-  user: user1,
-  patient: patient1
+replacement = Replacement.create!(
+  start_date: "12/11/2021",
+  end_date: "12/12/2021",
+  user: user2,
+  patient: patient1,
+  owner: user1
 )
 
-Replacement.create!(
-  start_date: Date.parse("19/11/2021"),
-  end_date: Date.parse("26/11/2021"),
-  user: user2,
-  patient: patient2
+care = Care.create!(
+  patient: patient1,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient2,
+  user: user1,
+  day: "Mardi"
 )
 
 puts "done!"

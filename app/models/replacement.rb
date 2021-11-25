@@ -3,4 +3,5 @@ class Replacement < ApplicationRecord
   validates :end_date, presence: true
   belongs_to :user
   belongs_to :patient
+  belongs_to :owner, class_name: "User"
 end

@@ -1,29 +1,34 @@
-<h1 class ="mb-4">Bonjour !</h1>
+<% if user_signed_in? %>
+  <h1 class ="mb-4">Bonjour <%= current_user.first_name.capitalize %> !</h1>
 
-<div>
-  <h4>Notifications :</h4>
   <div>
-  <p class="home-msg home-msg-success"><strong>Bravo</strong> 🎉 - Votre demande de remplacement a été acceptée</p>
+    <h4>Notifications :</h4>
+    <%# <div>
+    <p class="home-msg home-msg-success"><strong>Bravo</strong> 🎉 - Votre demande de remplacement a été acceptée</p>
+    </div> %>
   </div>
-</div>
 
-<div>
-  <h4>Nouvelles transmissions:</h4>
-    <div>
-  <p class="home-msg home-msg-danger"><strong>Transmissions</strong> 📝 - IDE / Patient : transmissions</p>
+  <div>
+    <h4>Nouvelles transmissions:</h4>
+      <div>
+    <p class="home-msg home-msg-danger"><strong>Transmissions</strong> 📝 - IDE / Patient : transmissions</p>
+    </div>
   </div>
-</div>
 
-<div>
-  <h4>Dernières actualités:</h4>
-    <div>
-  <p class="home-msg home-msg-warning"><strong>Actualités</strong> 📰 - #Channel</p>
+  <div>
+    <h4>Dernières actualités:</h4>
+      <div>
+    <p class="home-msg home-msg-warning"><strong>Actualités</strong> 📰 - #Channel</p>
+    </div>
   </div>
-</div>
 
-<div>
-  <h4>Nouveaux messages:</h4>
-    <div>
-  <p class="home-msg home-msg-warning"><strong>Message</strong> 📩 - IDE vous a envoyé un message</p>
+  <div>
+    <h4>Nouveaux messages:</h4>
+      <div>
+    <p class="home-msg home-msg-warning"><strong>Message</strong> 📩 - IDE vous a envoyé un message</p>
+    </div>
   </div>
-</div>
+
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>

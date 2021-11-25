@@ -3,7 +3,7 @@
         <h4 class="tocare"><%= image_tag "logo.png", class: "avatar" %> ToCare</h4>
       <% end %>
       <% if user_signed_in? %>
-        <%= link_to root_path, class: "navbar-brand" do %>
+        <%= link_to user_path(current_user), class: "navbar-brand" do %>
           <%= image_tag current_user.photo, class: "avatar logo" %>
         <% end %>
       <% else %>

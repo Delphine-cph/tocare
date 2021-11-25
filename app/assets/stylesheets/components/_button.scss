@@ -10,3 +10,35 @@
     opacity: 1;
   }
 }
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.btn-gradient {
+  color: white;
+  padding: 8px 100px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#7BE4DE, #21DBD0);
+  transition: background 0.3s ease;
+  border: 1px solid #21DBD0;
+  text-shadow: 0px 4px 7px rgba(0,0,0, 0.07);
+  letter-spacing: 0.8px;
+  display: block;
+  margin : auto;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#7BE4DE, #21DBD0);
+  color: white;
+}

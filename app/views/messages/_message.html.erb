@@ -1,0 +1,19 @@
+<div class="message d-flex align-items-center <%= message.user == current_user ? "ownmessage" : "othermessage" %>" id="message-<%= message.id %>">
+  <div class="chatinfo">
+    <% if message.user.photo %>
+      <div style="margin-right: 5px;">
+        <%= image_tag message.user.photo, class: "avatar" %>
+      </div>
+    <% else %>
+      <div style="margin-right: 5px;">
+        <img src='https://pic.onlinewebfonts.com/svg/img_258083.png' class ="avatar">
+      </div>
+    <% end %>
+  </div>
+  <div class="chatcontent p-2">
+    <div id="message-<%= message.id %>">
+      <div style="font-size: 14px;"><strong><%= message.user.first_name.capitalize  %></strong> - <i><%= l message.created_at, format: :short %></i></div>
+     <p style="margin-bottom: 0px;" ><%= message.content %></p>
+    </div>
+  </div>
+</div>

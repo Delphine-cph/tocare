@@ -1,0 +1,16 @@
+<h1>Patients</h1>
+<div class= "action-buttons">
+  <a href="#" class="card-actions" id="tr">Transmissions</a>
+  <a href="#" class="card-actions">+</a>
+</div>
+<div class="cards">
+  <% @patients.each do |patient| %>
+
+  <div class="card-patient-infos">
+    <div>
+    <%= patient.display_confidential_name %>
+    </div>
+    <p><%= patient.age %> ans</p>
+  </div>
+  <% end %>
+</div>

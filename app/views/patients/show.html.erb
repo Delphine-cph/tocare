@@ -1,48 +1,58 @@
-<div class="container">
-  <div class="patient-backbutton">
-    <h1>Patient :</h1>
-    <%= link_to "Retour", patients_path %>
+<%= link_to "<", patients_path, class: "btn btn-retour" %>
+
+
+<h1 class="text-center"><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
+<p class="text-center">_________________________________________</p>
+
+
+  <div class="card-info-patient">
+  <h4>INFORMATIONS</h4>
+    <div><strong> Age:</strong> <%= @patient.age %> ans</div>
+    <div><strong>Adresse:</strong> <%= @patient.adress %></div>
+    <div><strong>Tél:</strong> <%= @patient.telephone_number %></div>
+    <div><strong>Contact:</strong> <%= @patient.telephone_family %></div>
   </div>
-  <div class="patient-information">
-    <h3><%= @patient.last_name.capitalize %> <%= @patient.first_name.capitalize %></h3>
-    <div>Age: <%= @patient.age %> ans</div>
-    <div>Adresse: <%= @patient.adress %></div>
-    <div>Tél: <%= @patient.telephone_number %></div>
-    <div>Contact: <%= @patient.telephone_family %></div>
+
+  <div class="card-info-patient">
+    <h4>IDEL référents: </h4>
+    <p>Marie, Pauline</p>
   </div>
-  <div>
-    <div><h4>IDEL référents: </h4>Marie, Pauline</div>
-  </div>
-  <div>
-    <h4>ANTECEDENTS:</h4>
+
+  <div class="card-info-patient">
+    <h4>ATCDS</h4>
     <ul>
       <li>PTG en mai 2020</li>
       <li>HTA</li>
       <li>Cataracte</li>
     </ul>
-    <br>
-    <h4>Allergie: Iode</h4>
   </div>
-  <div>
-    <h4>Traitements:</h4>
+
+  <div class="card-info-patient alerte-allergie">
+    <h4>ALLERGIES : IODE</h4>
+  </div>
+
+  <div class="card-info-patient">
+    <h4>TRAITEMENTS</h4>
     <ul>
-    <li>Amlor 30 (1 - 0 - 1)</li>
-    <li>Paracétamol 1g ALD</li>
+      <li>Amlor 30 (1 - 0 - 1)</li>
+      <li>Paracétamol 1g ALD</li>
     </ul>
   </div>
-  <div>
-    <h4>Soins:</h4>
+
+  <div class="card-info-patient">
+    <h4>SOINS</h4>
     <ul>
-    <li>Aide à la toilette</li>
-    <li>TA 1/jour</li>
-    <li>Pillulier</li>
-    <li>Pansement ulcère jambe gauche</li>
+      <li>Aide à la toilette</li>
+      <li>TA 1/jour</li>
+      <li>Pillulier</li>
+      <li>Pansement ulcère jambe gauche</li>
     </ul>
   </div>
-  <div>
-    <h4>DERNIERES TRANSMISSIONS:</h4>
+
+  <div class="card-info-patient">
+    <h4>DERNIERES TRANSMISSIONS</h4>
       <ul>
-        <li>Pst refait, le 06/11/21 (Marie)</li>
+        <li>06/11/21 (Marie) - Pst refait RAS</li>
       </ul>
   </div>
 </div>

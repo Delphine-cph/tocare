@@ -1,10 +1,27 @@
 .card-transmissions {
   display: flex;
-
+  justify-content: space-around;
 }
 
 
 
 .card-patient-infos {
   display: flex;
+}
+
+#trans {
+  border: 2px solid;
+  padding: 8px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  width: 68%;
+  text-align: center;
+  letter-spacing: 0.25rem;
+}
+
+#plus {
+  text-decoration: none;
+  padding: 8px 24px;
+  border: 2px solid;
+  border-radius: 14px;
 }

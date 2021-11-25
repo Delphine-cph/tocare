@@ -1,12 +1,17 @@
 <h1>Patients</h1>
-<div>
-  <a href="#">Transmissions</a>
-  <a href="#">+</a>
+<div class= "card-transmissions">
+  <a href="#" id="trans">Transmissions</a>
+  <a href="#" id="plus">+</a>
 </div>
-<div>
-  <img src="" alt="">
-  <div>
 
+  <% @patients.each do |patient| %>
+
+  <div>
+    <img src="">
+    <div>
+      <p>Patient <%= last_name.upcase %> <%= first_name.first.upcase %></p>
+      <p></p>
+    </div>
+    <p><%= patient.age %> ans</p>
   </div>
-  <p><%= @patient.age %>ans</p>
- </div>
+  <% end %>

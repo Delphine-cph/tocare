@@ -2,17 +2,19 @@
 <p class="text-center">_________________________________________</p>
 
 
-<div class= "action-buttons">
-  <%= link_to "Transmissions", "#", class: "card-actions" %>
-  <%= link_to "+", "#", class: "card-actions" %>
+<div class= "action-buttons my-4">
+  <strong><%= link_to "Transmissions", "#", class: "card-actions" %></strong>
+  <strong><%= link_to "+", "#", class: "card-actions" %></strong>
 </div>
 
 <% @patients.each do |patient| %>
-  <div class="cards">
+  <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
-        <%= patient.display_confidential_name %>
-        <p>Sexe:<%= patient.genre %></p>
-        <p><%= patient.age %> ans</p>
+      <div class="d-flex justify-content-between">
+        <strong class="patient-name"><%= patient.display_confidential_name %></strong>
+        <p>Sexe: <%= patient.genre %></p>
+      </div>
+        <p class="mb-0"><%= patient.age %> ans</p>
     <% end %>
     </div>
 <% end %>

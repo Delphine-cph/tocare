@@ -1,8 +1,8 @@
 class ReplacementsController < ApplicationController
   def index
     # @user.where(@replacement.start_date >= user.start_date && @replacement.end_date <= @user.end_date)
-
-    @replacements = Replacement.all
+    @users = User.where(arrondissement: current_user.arrondissement)
+                 .where.not(id: current_user.id)
     ## IF FILTER REPLACEMENTS BASED ON DATES
     # @replacements = Replacement.where("start_date >= ?", params[:start_date])
     #                            .where("end_date <= ?", params[:end_date])

@@ -3,7 +3,7 @@ class PatientsController < ApplicationController
     @patients = Patient.all
   end
 
-  def age
-    @patient = Patient.age
+  def show
+    @patient = Patient.find(params[:id])
   end
 end

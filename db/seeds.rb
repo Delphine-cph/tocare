@@ -222,7 +222,85 @@ care = Care.create!(
 care = Care.create!(
   patient: patient2,
   user: user1,
-  day: "Mardi"
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient3,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient4,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient5,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient6,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient7,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient8,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient9,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient10,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient11,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient12,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient13,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient14,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient15,
+  user: user1,
+  day: "Lundi"
 )
 
 puts "done!"

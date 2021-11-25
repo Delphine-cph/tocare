@@ -22,7 +22,7 @@ user1 = User.create!(
   last_name: "cph",
   adeli_number: "1234EFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-192"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512"
 )
 
 user2 = User.create!(
@@ -32,7 +32,7 @@ user2 = User.create!(
   last_name: "Rmn",
   adeli_number: "1290TFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-72"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-512"
 )
 
 user3 = User.create!(
@@ -42,7 +42,7 @@ user3 = User.create!(
   last_name: "bla",
   adeli_number: "9934EFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-72"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
 )
 
 user4 = User.create!(
@@ -52,7 +52,7 @@ user4 = User.create!(
   last_name: "ph",
   adeli_number: "1034HIT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-72"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
 )
 
 patient1 = Patient.create!(

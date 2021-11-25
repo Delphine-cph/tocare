@@ -1,28 +1,66 @@
+
  .action-buttons {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
-}
-
-.card-patient-infos {
-  display: flex;
-  background-color: lightgrey;
-  margin: 10px 0px;
+  width: 100%;
 }
 
 .card-actions {
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 10px 45px;
   border: 2px solid;
   border-radius: 14px;
+  font-size: 20px;
 }
 
-#tr {
-  width: 66%;
-  text-align: center;
-  letter-spacing: 0.10rem;
+.cards-patient {
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.07) ;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
-.cards {
+.patient-name {
+  font-size: 20px;
+}
 
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 79%;
+  width: 92px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-left: 9px;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
 }

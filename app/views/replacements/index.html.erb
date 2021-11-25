@@ -1,9 +1,37 @@
-<h1>Replacements</h1>
-<% @replacements.each do |replacement| %>
-<%= replacement.user.first_name %>
-<%= replacement.start_date %>
-<%= replacement.end_date %>
-<%= replacement.patient.first_name %>
-<%= replacement.patient.last_name %>
-<%= replacement.patient.adress %>
+<h4 class= "text-center">Voici le résultat de ta demande</h4>
+
+<% @users.each do |user| %>
+  <div class="card-product">
+    <%= image_tag user.photo %>
+    <div class="card-product-infos">
+      <h2> <%= user.first_name %> </h2>
+      <h2> <%= user.last_name %> </h2>
+      <p><%= user.arrondissement %></p>
+    </div>
+  </div>
 <% end %>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-center mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Je valide
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ta demande à bien était prise en compte</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class= "p-text">Tu recevras une notification de validation de tes remplaçants </p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Faire une autre demande", new_replacement_path, class: "btn btn-primary btn-center my-3" %></div>
+        <%= link_to "Retour à l'accueil", root_path, class: "btn btn-primary btn-center my-3" %>
+      </div>
+    </div>
+  </div>
+</div>

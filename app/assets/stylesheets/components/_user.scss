@@ -1,36 +1,49 @@
-
-.profile-card-header {
+.card-product {
+  overflow: hidden;
+  height: 140px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding-left: 10px;
+
   img {
-    width: 40%;
-    border-radius: 50%;
-    margin-top: 20px;
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
   }
 }
 
-.profile-card-info {
-  h2 {
-    margin-top: 40px;
-  }
+.card-product h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 10px;
 }
 
-.address {
-
+.card-product p {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  margin-left: 15px;
 }
 
-.profile-card-description {
-  text-align: center;
-  margin: 0 40px;
-  height: 100px;
+.card-product .card-product-infos {
+  padding: 16px;
 }
 
 .profile-card-tags {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 5px;
 }
 
 .list-in-line {
   display: inline;
+}
+
+.card-user {
+  font-size: 18px;
+  margin-left: 0px;
 }

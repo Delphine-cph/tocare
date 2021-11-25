@@ -1,17 +1,20 @@
 <h1>Patients</h1>
-<div class= "action-buttons">
-  <a href="#" class="card-actions" id="tr">Transmissions</a>
-  <a href="#" class="card-actions">+</a>
+<p class="text-center">_________________________________________</p>
+
+
+<div class= "action-buttons my-4">
+  <strong><%= link_to "Transmissions", "#", class: "card-actions" %></strong>
+  <strong><%= link_to "+", "#", class: "card-actions" %></strong>
 </div>
-<div class="cards">
-  <% @patients.each do |patient| %>
+
+<% @patients.each do |patient| %>
+  <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
-      <div class="card-patient-infos">
-        <div>
-        <%= patient.display_confidential_name %>
-        </div>
-        <p><%= patient.age %> ans</p>
+      <div class="d-flex justify-content-between">
+        <strong class="patient-name"><%= patient.display_confidential_name %></strong>
+        <p>Sexe: <%= patient.genre %></p>
       </div>
+        <p class="mb-0"><%= patient.age %> ans</p>
     <% end %>
-  <% end %>
-</div>
+    </div>
+<% end %>

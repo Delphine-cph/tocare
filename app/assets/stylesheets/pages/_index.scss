@@ -1,3 +1,20 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "login";
+
+
+.modal-dialog{
+  padding-top: 170px;
+}
+
+.modal-content {
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  height: inherit;
+}
+
+.btn-center{
+  display: block;
+  margin: auto;
+}

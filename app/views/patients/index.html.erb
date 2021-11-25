@@ -5,12 +5,13 @@
 </div>
 <div class="cards">
   <% @patients.each do |patient| %>
-
-  <div class="card-patient-infos">
-    <div>
-    <%= patient.display_confidential_name %>
-    </div>
-    <p><%= patient.age %> ans</p>
-  </div>
+    <%= link_to patient_path(patient) do %>
+      <div class="card-patient-infos">
+        <div>
+        <%= patient.display_confidential_name %>
+        </div>
+        <p><%= patient.age %> ans</p>
+      </div>
+    <% end %>
   <% end %>
 </div>

@@ -1,71 +1,36 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.07);
+  height: 140px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
   display: flex;
   align-items: center;
+  padding-left: 10px;
 
   img {
-  width: 40%;
+  width: 90px;
   border-radius: 50%;
-  margin-top: 20px;
-}
-}
-
-.card-product img {
-  height: 100%;
-  width: 120px;
   object-fit: cover;
-
+  }
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
+  margin-left: 10px;
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  margin-left: 15px;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
-}
-
-
-
-
-
-
-.profile-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid rgba(0,0,0, 0.07);
-  padding: 10px;
-  img {
-    width: 40%;
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-}
-
-.profile-card-info {
-  h2 {
-    margin-top: 40px;
-  }
-}
-
-.profile-card-description {
-  text-align: center;
-  margin: 0 40px;
-  height: 100px;
 }
 
 .profile-card-tags {
@@ -76,4 +41,9 @@
 
 .list-in-line {
   display: inline;
+}
+
+.card-user {
+  font-size: 18px;
+  margin-left: 0px;
 }

@@ -31,7 +31,7 @@ user2 = User.create!(
   first_name: "mathieu",
   last_name: "Rmn",
   adeli_number: "1290TFT",
-  arrondissement: "13001",
+  arrondissement: "13011",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-72"
 )
 
@@ -108,7 +108,7 @@ patient5 = Patient.create!(
 patient6 = Patient.create!(
   first_name: "Louis",
   last_name: "Dalleau",
-  soin: "Dialise",
+  soin: "Dialyse",
   age: "75",
   adress: "100 avenue Lauraine 13011",
   telephone_number: "0678909878",
@@ -148,7 +148,7 @@ patient9 = Patient.create!(
 patient10 = Patient.create!(
   first_name: "Paul",
   last_name: "Sossa",
-  soin: "Douche",
+  soin: "Injection s/c",
   age: "95",
   adress: "9 rue de la fontaine 13011",
   telephone_number: "0678909875",
@@ -158,7 +158,7 @@ patient10 = Patient.create!(
 patient11 = Patient.create!(
   first_name: "Marie",
   last_name: "Claire",
-  soin: "Massage Cardiaque",
+  soin: "Pansement",
   age: "115",
   adress: "111 rue de la Moula 13011",
   telephone_number: "0678909835",
@@ -168,7 +168,7 @@ patient11 = Patient.create!(
 patient12 = Patient.create!(
   first_name: "Pierre",
   last_name: "Talosi",
-  soin: "Soins des pieds",
+  soin: "Surveillance de la glycémie",
   age: "75",
   adress: "97 rue fifou 13011",
   telephone_number: "0678909895",
@@ -178,7 +178,7 @@ patient12 = Patient.create!(
 patient13 = Patient.create!(
   first_name: "Remi",
   last_name: "Falomo",
-  soin: "Dialise",
+  soin: "Pansement ulcère",
   age: "85",
   adress: "99 rue jilo 13011",
   telephone_number: "0678900975",
@@ -188,7 +188,7 @@ patient13 = Patient.create!(
 patient14 = Patient.create!(
   first_name: "Jeremy",
   last_name: "Poloti",
-  soin: "Dialise",
+  soin: "Pansement complexe",
   age: "95",
   adress: "49 rue de la bidelaire 13011",
   telephone_number: "0678909175",

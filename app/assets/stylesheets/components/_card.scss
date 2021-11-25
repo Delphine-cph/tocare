@@ -1,27 +1,28 @@
-.card-transmissions {
+ .action-buttons {
   display: flex;
   justify-content: space-around;
+  margin: 20px;
 }
-
-
 
 .card-patient-infos {
   display: flex;
+  background-color: lightgrey;
+  margin: 10px 0px;
 }
 
-#trans {
-  border: 2px solid;
-  padding: 8px 22px;
-  border-radius: 14px;
-  text-decoration: none;
-  width: 68%;
-  text-align: center;
-  letter-spacing: 0.25rem;
-}
-
-#plus {
+.card-actions {
   text-decoration: none;
   padding: 8px 24px;
   border: 2px solid;
   border-radius: 14px;
+}
+
+#tr {
+  width: 66%;
+  text-align: center;
+  letter-spacing: 0.10rem;
+}
+
+.cards {
+
 }

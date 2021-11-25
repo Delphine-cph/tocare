@@ -5,4 +5,8 @@ class Patient < ApplicationRecord
   validates :adress, presence: true
   has_many :cares
   has_many :replacements
+
+  def display_confidential_name
+    "#{last_name.first(3).upcase}. #{first_name.first.upcase}."
+  end
 end

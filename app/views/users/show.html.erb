@@ -1,12 +1,27 @@
+
+<div class="card-product">
+  <%= image_tag @user.photo %>
+  <div class="card-product-infos">
+    <h2><%= @user.last_name.upcase %> <%= @user.first_name.capitalize %></h2>
+    <p>IDE depuis 6 ans</p>
+  </div>
+</div>
+
+
+
+
+
+
 <div class="profile-card pt-6 px-3">
+
   <div class="profile-card-header">
     <%= image_tag @user.photo %>
     <div class="profile-card-info">
       <h2><%= @user.last_name.upcase %> <%= @user.first_name.capitalize %></h2>
-      <p>IDE depuis 3 mois</p>
     </div>
   </div>
-  <ul class="">
+        <p>IDE depuis 6 ans</p>
+  <ul class="mt-3">
     <% 5.times do %>
       <li class="list-in-line"><i class="fas fa-star"></i></li>
     <% end %>
@@ -14,7 +29,7 @@
 
   <h3 class="address">Localisation: <%= @user.arrondissement %></h3>
   <div class="profile-card-description">
-    Bla BLa Description mon diplôme ma fac gna gna gna etc
+    Infirmière libérale depuis 3 ans
   </div>
   <p class="">Soins:</p>
   <div class="profile-card-tags">

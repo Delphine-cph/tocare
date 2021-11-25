@@ -51,7 +51,17 @@ user4 = User.create!(
   first_name: "lucien",
   last_name: "ph",
   adeli_number: "1034HIT",
-  arrondissement: "13011",
+  arrondissement: "13",
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-72"
+)
+
+user4 = User.create!(
+  email: "lulu@gmail.com",
+  password: "lucien",
+  first_name: "lucien",
+  last_name: "fidel",
+  adeli_number: "1034HIT",
+  arrondissement: "13",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-72"
 )
 

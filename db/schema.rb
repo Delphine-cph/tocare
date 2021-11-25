@@ -62,8 +62,10 @@ ActiveRecord::Schema.define(version: 2021_11_25_103809) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "owner_id"
+    t.bigint "users_id", null: false
     t.index ["patient_id"], name: "index_replacements_on_patient_id"
     t.index ["user_id"], name: "index_replacements_on_user_id"
+    t.index ["users_id"], name: "index_replacements_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,4 +93,5 @@ ActiveRecord::Schema.define(version: 2021_11_25_103809) do
   add_foreign_key "messages", "users"
   add_foreign_key "replacements", "patients"
   add_foreign_key "replacements", "users"
+  add_foreign_key "replacements", "users", column: "users_id"
 end

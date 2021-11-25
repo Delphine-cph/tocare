@@ -1,17 +1,18 @@
 <h1>Patients</h1>
+<p class="text-center">_________________________________________</p>
+
+
 <div class= "action-buttons">
-  <a href="#" class="card-actions" id="tr">Transmissions</a>
-  <a href="#" class="card-actions">+</a>
+  <%= link_to "Transmissions", "#", class: "card-actions" %>
+  <%= link_to "+", "#", class: "card-actions" %>
 </div>
-<div class="cards">
-  <% @patients.each do |patient| %>
+
+<% @patients.each do |patient| %>
+  <div class="cards">
     <%= link_to patient_path(patient) do %>
-      <div class="card-patient-infos">
-        <div>
         <%= patient.display_confidential_name %>
-        </div>
+        <p>Sexe:<%= patient.genre %></p>
         <p><%= patient.age %> ans</p>
-      </div>
     <% end %>
-  <% end %>
-</div>
+    </div>
+<% end %>

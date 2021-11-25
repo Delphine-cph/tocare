@@ -1,18 +1,12 @@
  .action-buttons {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
-}
-
-.card-patient-infos {
-  display: flex;
-  background-color: lightgrey;
-  margin: 10px 0px;
+  margin-bottom: 20px;
 }
 
 .card-actions {
   text-decoration: none;
-  padding: 8px 24px;
+  padding: 8px 45px;
   border: 2px solid;
   border-radius: 14px;
 }
@@ -24,5 +18,5 @@
 }
 
 .cards {
-
+background-color: white;
 }

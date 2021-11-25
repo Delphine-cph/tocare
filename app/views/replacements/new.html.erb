@@ -1,20 +1,19 @@
 <div class="form-container">
-  <div class="formulaire">
+  <h5>Tu souhaites te faire remplacer ?</h5>
+  <p class="text-center"> _____________________________________</p>
     <%= form_tag replacements_path, method:"post" do %>
-
-      <div>
-        <h3>Tu souhaites te faire remplacer ?</h3>
-        <label>
-          <%= date_field("replacement", "start_date") %>
-          Date de début
-        </label>
-        <label>
-          <%= date_field("replacement", "end_date") %>
-          Date de fin
-        </label>
-      </div>
-
-      <%= submit_tag "Je valide !", class: "btn btn-primary" %>
+        <div class="formulaire center-div">
+        <div class="container">
+          <label>
+            <p>Date de début</p>
+            <%= date_field("replacement", "start_date") %>
+          </label>
+          <label>
+            <p>Date de fin</p>
+            <%= date_field("replacement", "end_date") %>
+          </label>
+          </div>
+      <%= submit_tag "Je valide !", class: "btn btn-gradient mt-4" %>
+    </div>
     <% end %>
-  </div>
 </div>

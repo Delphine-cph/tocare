@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: space-around;
   height: 60px;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
 }
 .footer-links {
   display: flex;

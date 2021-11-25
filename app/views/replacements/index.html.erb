@@ -1,4 +1,4 @@
-
+<h4 class= "text-center">Voici le résultat de ta demande</h4>
 
 <% @users.each do |user| %>
   <div class="card-product">
@@ -13,7 +13,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-primary btn-center mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Je valide
 </button>
 
@@ -29,8 +29,8 @@
         <p class= "p-text">Tu recevras une notification de validation de tes remplaçants </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-center my-3" data-bs-dismiss="modal" >Faire une autre demande</button>
-        <button type="button" class="btn btn-primary btn-center">Retour à l’accueil</button>
+        <%= link_to "Faire une autre demande", new_replacement_path, class: "btn btn-primary btn-center my-3" %></div>
+        <%= link_to "Retour à l'accueil", root_path, class: "btn btn-primary btn-center my-3" %>
       </div>
     </div>
   </div>

@@ -29,9 +29,9 @@
   padding: 8px 100px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#7BE4DE, #21DBD0);
+  background: linear-gradient(#698bea, #4a6ac5);
   transition: background 0.3s ease;
-  border: 1px solid #21DBD0;
+  border: 1px solid #4a6ac5;
   text-shadow: 0px 4px 7px rgba(0,0,0, 0.07);
   letter-spacing: 0.8px;
   display: block;
@@ -39,6 +39,6 @@
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#7BE4DE, #21DBD0);
+  background: linear-gradient(#698bea, #4a6ac5);
   color: white;
 }

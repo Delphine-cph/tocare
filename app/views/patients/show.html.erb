@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="patient-backbutton">
+    <h1>Patient :</h1>
+    <%= link_to "Retour", patients_path %>
+  </div>
+  <div class="patient-information">
+    <h3><%= @patient.last_name.capitalize %> <%= @patient.first_name.capitalize %></h3>
+    <div>Age: <%= @patient.age %> ans</div>
+    <div>Adresse: <%= @patient.adress %></div>
+    <div>Tél: <%= @patient.telephone_number %></div>
+    <div>Contact: <%= @patient.telephone_family %></div>
+  </div>
+  <div>
+    <div><h4>IDEL référents: </h4>Marie, Pauline</div>
+  </div>
+  <div>
+    <h4>ANTECEDENTS:</h4>
+    <ul>
+      <li>PTG en mai 2020</li>
+      <li>HTA</li>
+      <li>Cataracte</li>
+    </ul>
+    <br>
+    <h4>Allergie: Iode</h4>
+  </div>
+  <div>
+    <h4>Traitements:</h4>
+    <ul>
+    <li>Amlor 30 (1 - 0 - 1)</li>
+    <li>Paracétamol 1g ALD</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Soins:</h4>
+    <ul>
+    <li>Aide à la toilette</li>
+    <li>TA 1/jour</li>
+    <li>Pillulier</li>
+    <li>Pansement ulcère jambe gauche</li>
+    </ul>
+  </div>
+  <div>
+    <h4>DERNIERES TRANSMISSIONS:</h4>
+      <ul>
+        <li>Pst refait, le 06/11/21 (Marie)</li>
+      </ul>
+  </div>
+</div>
+
+
+
+
+
+
+<%# first_name: "Paul",
+last_name: "Sossa",
+soin: "Douche",
+age: 95,
+adress: "9 rue de la fontaine 13011",
+telephone_number: 678909875,
+telephone_family: 645454545, %>

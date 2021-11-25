@@ -10,8 +10,8 @@ require "open-uri"
 puts 'cleaning db'
 Replacement.destroy_all
 Care.destroy_all
-Chatroom.destroy_all
 Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 Patient.destroy_all
 
@@ -22,7 +22,7 @@ user1 = User.create!(
   last_name: "cph",
   adeli_number: "1234EFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-192"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512"
 )
 
 user2 = User.create!(
@@ -32,7 +32,7 @@ user2 = User.create!(
   last_name: "Rmn",
   adeli_number: "1290TFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-72"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GK1N8E90-699d5456404e-512"
 )
 
 user3 = User.create!(
@@ -42,7 +42,7 @@ user3 = User.create!(
   last_name: "bla",
   adeli_number: "9934EFT",
   arrondissement: "13011",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-72"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
 )
 
 user4 = User.create!(
@@ -51,19 +51,9 @@ user4 = User.create!(
   first_name: "lucien",
   last_name: "ph",
   adeli_number: "1034HIT",
-  arrondissement: "13",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-72"
-)
+  arrondissement: "13011",
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
 
-user4 = User.create!(
-  email: "lulu@gmail.com",
-  password: "lucien",
-  first_name: "lucien",
-  last_name: "fidel",
-  adeli_number: "1034HIT",
-  arrondissement: "13",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-72"
-)
 
 patient1 = Patient.create!(
   first_name: "Paul",
@@ -71,6 +61,7 @@ patient1 = Patient.create!(
   soin: "Douche",
   age: "95",
   adress: "9 rue de la fontaine 13011",
+  genre: "M",
   telephone_number: "0678909875",
   telephone_family: "0645454545"
 )
@@ -81,6 +72,7 @@ patient2 = Patient.create!(
   soin: "Injection s/c",
   age: "86",
   adress: "56 bd de la valbarelle 13011",
+  genre: "F",
   telephone_number: "0678945875",
   telephone_family: "0645456545"
 )
@@ -91,6 +83,7 @@ patient3 = Patient.create!(
   soin: "Douche",
   age: "105",
   adress: "23 rue de la font 13011",
+  genre: "F",
   telephone_number: "0678909810",
   telephone_family: "0645454510"
 )
@@ -101,6 +94,7 @@ patient4 = Patient.create!(
   soin: "Pansement",
   age: "75",
   adress: "12 rue de la fontaine 13011",
+  genre: "M",
   telephone_number: "0678909876",
   telephone_family: "0645454546"
 )
@@ -111,6 +105,7 @@ patient5 = Patient.create!(
   soin: "Douche",
   age: "115",
   adress: "20 rue de la fontaine 13011",
+  genre: "M",
   telephone_number: "0678909877",
   telephone_family: "0645454547"
 )
@@ -121,6 +116,7 @@ patient6 = Patient.create!(
   soin: "Dialyse",
   age: "75",
   adress: "100 avenue Lauraine 13011",
+  genre: "M",
   telephone_number: "0678909878",
   telephone_family: "0645454548"
 )
@@ -131,6 +127,7 @@ patient7 = Patient.create!(
   soin: "Douche",
   age: "85",
   adress: "30 rue sainte 13011",
+  genre: "M",
   telephone_number: "0678909879",
   telephone_family: "0645454549"
 )
@@ -141,6 +138,7 @@ patient8 = Patient.create!(
   soin: "Pansement",
   age: "95",
   adress: "100 rue de toulouse 13011",
+  genre: "M",
   telephone_number: "0678909815",
   telephone_family: "0645454515"
 )
@@ -152,6 +150,7 @@ patient9 = Patient.create!(
   age: "91",
   adress: "67 rue fameux 13011",
   telephone_number: "0678909825",
+  genre: "M",
   telephone_family: "0645454525"
 )
 
@@ -161,6 +160,7 @@ patient10 = Patient.create!(
   soin: "Injection s/c",
   age: "95",
   adress: "9 rue de la fontaine 13011",
+  genre: "M",
   telephone_number: "0678909875",
   telephone_family: "0645454545"
 )
@@ -171,6 +171,7 @@ patient11 = Patient.create!(
   soin: "Pansement",
   age: "115",
   adress: "111 rue de la Moula 13011",
+  genre: "F",
   telephone_number: "0678909835",
   telephone_family: "0645454535"
 )
@@ -181,6 +182,7 @@ patient12 = Patient.create!(
   soin: "Surveillance de la glycémie",
   age: "75",
   adress: "97 rue fifou 13011",
+  genre: "M",
   telephone_number: "0678909895",
   telephone_family: "0645454595"
 )
@@ -191,6 +193,7 @@ patient13 = Patient.create!(
   soin: "Pansement ulcère",
   age: "85",
   adress: "99 rue jilo 13011",
+  genre: "M",
   telephone_number: "0678900975",
   telephone_family: "0645450945"
 )
@@ -201,6 +204,7 @@ patient14 = Patient.create!(
   soin: "Pansement complexe",
   age: "95",
   adress: "49 rue de la bidelaire 13011",
+  genre: "M",
   telephone_number: "0678909175",
   telephone_family: "0645454145"
 )
@@ -211,6 +215,7 @@ patient15 = Patient.create!(
   soin: "Douche",
   age: "45",
   adress: "109 rue mange 13011",
+  genre: "M",
   telephone_number: "0778909875",
   telephone_family: "0745454545"
 )

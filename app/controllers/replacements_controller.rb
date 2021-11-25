@@ -37,8 +37,6 @@ class ReplacementsController < ApplicationController
   # 3. for each care recuperer date puis trouver toutes les dates
 
     redirect_to replacements_path
-
-    flash[:notice] = 'Votre demande de remplacement à bien etait prise en compte'
   end
 
   private

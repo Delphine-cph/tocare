@@ -41,7 +41,7 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "bla",
+  last_name: "Roh",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 3 ans en chirurgie ambulatoire, en parallèle je suis remplaçant en libéral.",
@@ -61,9 +61,9 @@ user4 = User.create!(
 
 patient1 = Patient.create!(
   first_name: "Paul",
-  last_name: "Sossa",
+  last_name: "Souza",
   soin: "Douche",
-  age: "95",
+  age: "72",
   adress: "9 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909875",
@@ -72,7 +72,7 @@ patient1 = Patient.create!(
 
 patient2 = Patient.create!(
   first_name: "Georgette",
-  last_name: "Soler",
+  last_name: "Salers",
   soin: "Injection s/c",
   age: "86",
   adress: "56 bd de la valbarelle 13011",
@@ -83,9 +83,9 @@ patient2 = Patient.create!(
 
 patient3 = Patient.create!(
   first_name: "Alice",
-  last_name: "Sa",
+  last_name: "Saras",
   soin: "Douche",
-  age: "105",
+  age: "88",
   adress: "23 rue de la font 13011",
   genre: "F",
   telephone_number: "0678909810",
@@ -93,7 +93,7 @@ patient3 = Patient.create!(
 )
 
 patient4 = Patient.create!(
-  first_name: "Ugo",
+  first_name: "Hugo",
   last_name: "Compain",
   soin: "Pansement",
   age: "75",
@@ -104,10 +104,10 @@ patient4 = Patient.create!(
 )
 
 patient5 = Patient.create!(
-  first_name: "Paul",
+  first_name: "Pierre",
   last_name: "Mirabel",
   soin: "Douche",
-  age: "115",
+  age: "81",
   adress: "20 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909877",
@@ -127,9 +127,9 @@ patient6 = Patient.create!(
 
 patient7 = Patient.create!(
   first_name: "Jules",
-  last_name: "Loula",
+  last_name: "Lula",
   soin: "Douche",
-  age: "85",
+  age: "67",
   adress: "30 rue sainte 13011",
   genre: "M",
   telephone_number: "0678909879",
@@ -140,7 +140,7 @@ patient8 = Patient.create!(
   first_name: "Tom",
   last_name: "Posa",
   soin: "Pansement",
-  age: "95",
+  age: "76",
   adress: "100 rue de toulouse 13011",
   genre: "M",
   telephone_number: "0678909815",
@@ -151,7 +151,7 @@ patient9 = Patient.create!(
   first_name: "Andrea",
   last_name: "Clarosa",
   soin: "Douche",
-  age: "91",
+  age: "87",
   adress: "67 rue fameux 13011",
   telephone_number: "0678909825",
   genre: "M",
@@ -162,7 +162,7 @@ patient10 = Patient.create!(
   first_name: "Paul",
   last_name: "Sossa",
   soin: "Injection s/c",
-  age: "95",
+  age: "63",
   adress: "9 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909875",
@@ -173,7 +173,7 @@ patient11 = Patient.create!(
   first_name: "Marie",
   last_name: "Claire",
   soin: "Pansement",
-  age: "115",
+  age: "69",
   adress: "111 rue de la Moula 13011",
   genre: "F",
   telephone_number: "0678909835",
@@ -214,8 +214,8 @@ patient14 = Patient.create!(
 )
 
 patient15 = Patient.create!(
-  first_name: "Arthur",
-  last_name: "Siso",
+  first_name: "Jean-Louis",
+  last_name: "Sisco",
   soin: "Douche",
   age: "45",
   adress: "109 rue mange 13011",

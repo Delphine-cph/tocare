@@ -1,0 +1,13 @@
+<div class="title-addbutton">
+  <div>
+  <h1>Transmissions</h1>
+  </div>
+  <%= link_to "Ajouter", patients_path %>
+<%= simple_form_for [@patient, @transmission] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>
+</div>
+<% @transmissions.each do |transmission| %>
+  <%= transmission.content %>
+<% end %>

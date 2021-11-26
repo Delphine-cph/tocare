@@ -20,7 +20,7 @@
     <!-- Modal view user -->
     <div class="modal fade" id="myModal<%= user.id %>">
         <div class="modal-dialog mx-4">
-          <div class="modal-content">
+          <div class="modal-content font-modal">
               <!-- Modal Header -->
               <div class="modal-header">
                 <h4 class="modal-title ml-4"> <strong> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %></strong> </h4>
@@ -36,6 +36,7 @@
                     <% end %>
                   </ul>
                 </div>
+                <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
                 <p> <strong>Description:</strong> <%= user.description %></p>
               </div>
               <!-- Modal footer -->
@@ -57,11 +58,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-<<<<<<< HEAD
         <h5 class="modal-title" id="exampleModalLabel">Ta demande a bien été prise en compte</h5>
-=======
-        <h5 class="modal-title" id="exampleModalLabel">Bravo ta demande a bien été prise en compte</h5>
->>>>>>> 456f6ce26ca369d51ba1951c608ac202b2f2d10a
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

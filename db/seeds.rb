@@ -53,7 +53,7 @@ user4 = User.create!(
   adeli_number: "1034HIT",
   arrondissement: "13011",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
-
+)
 
 patient1 = Patient.create!(
   first_name: "Paul",
@@ -220,12 +220,20 @@ patient15 = Patient.create!(
   telephone_family: "0745454545"
 )
 
-
-replacement = Replacement.create!(
+replacement1 = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
   user: user2,
   patient: patient1,
+  owner: user1,
+  status: "new"
+)
+
+replacement2 = Replacement.create!(
+  start_date: "12/11/2021",
+  end_date: "12/12/2021",
+  user: user2,
+  patient: patient2,
   owner: user1
 )
 

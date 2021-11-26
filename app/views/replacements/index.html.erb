@@ -2,12 +2,18 @@
 
 
 <div class="card-products">
-  <% @users.each do |user| %>
+  <% @replacements.each do |user, replacements| %>
     <button class="card-product" data-bs-toggle="modal" data-bs-target="#myModal<%= user.id %>">
+    <div class="card-product">
       <%= image_tag user.photo %>
       <div class="card-product-infos">
         <h2> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %> </h2>
         <p> Arrondissement : <%= user.arrondissement %></p>
+        <% replacements.each do |replacement| %>
+        <div class="d-flex">
+        <p><%= replacement.patient.first_name %></p>
+        </div>
+        <% end  %>
       </div>
     </button>
 
@@ -51,7 +57,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+<<<<<<< HEAD
         <h5 class="modal-title" id="exampleModalLabel">Ta demande a bien été prise en compte</h5>
+=======
+        <h5 class="modal-title" id="exampleModalLabel">Bravo ta demande a bien été prise en compte</h5>
+>>>>>>> 456f6ce26ca369d51ba1951c608ac202b2f2d10a
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

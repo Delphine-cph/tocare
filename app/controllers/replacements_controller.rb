@@ -3,12 +3,15 @@ class ReplacementsController < ApplicationController
     # @user.where(@replacement.start_date >= user.start_date && @replacement.end_date <= @user.end_date)
     @users = User.where(arrondissement: current_user.arrondissement)
                  .where.not(id: current_user.id)
+
+    @replacements = Replacement.where(owner: current_user).group_by(&:user)
     ## IF FILTER REPLACEMENTS BASED ON DATES
     # @replacements = Replacement.where("start_date >= ?", params[:start_date])
     #                            .where("end_date <= ?", params[:end_date])
     # if @replacements.empty?
     #   flash[:notice] = 'Pas de correspondance trouvée'
     # end
+
   end
 
   def status_accepted
@@ -30,8 +33,9 @@ class ReplacementsController < ApplicationController
     @patients.each do |patient|
     replacement = Replacement.new(replacement_params)
       replacement.patient = patient
-      replacement.user = current_user
-      replacement.save
+      replacement.owner = current_user
+      replacement.user = User.where.not(id: current_user.id).sample
+      replacement.save!
     end
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates

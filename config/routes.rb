@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get "users/:id", to: "users#show", as: :user
 
   resources :users
-  resources :patients
+  resources :patients do
+    resources :transmissions, only: [:create, :index]
+  end
   resources :replacements, only: %w[new create index]
   resources :chatrooms, only: %i[index show] do
     resources :messages, only: :create

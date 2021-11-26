@@ -12,17 +12,25 @@
     </button>
 
     <!-- Modal view user -->
-    <div class="modal" id="myModal<%= user.id %>">
+    <div class="modal fade" id="myModal<%= user.id %>">
         <div class="modal-dialog mx-4">
           <div class="modal-content">
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title"> <strong> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %></strong> </h4>
+                <h4 class="modal-title ml-4"> <strong> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %></strong> </h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <!-- Modal body -->
               <div class="modal-body">
-                Modal body..
+              <%= image_tag user.photo, class: "avatar", style: "width: 100px; border:" %>
+                <div class="card-user mt-3">
+                  <ul class="ml-0"> <strong>Notation :</strong>
+                    <% 5.times do %>
+                      <li class="list-in-line"><i class="fas fa-star"></i></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <p> <strong>Description:</strong> <%= user.description %></p>
               </div>
               <!-- Modal footer -->
           </div>

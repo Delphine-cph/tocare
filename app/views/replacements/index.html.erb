@@ -10,10 +10,9 @@
         <h2> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %> </h2>
         <p> Arrondissement : <%= user.arrondissement %></p>
         <% replacements.each do |replacement| %>
-        <div class="d-flex">
-        <p><%= replacement.patient.first_name %></p>
-        </div>
+          <p><%= replacement.patient.first_name %></p>
         <% end  %>
+        </div>
       </div>
     </button>
 

@@ -34,9 +34,12 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 50px;
+  margin: 10px 15px;
+  margin-bottom: 22px;
 }
 
 .card-product img {
@@ -59,8 +62,23 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  margin-left: 2px;
+  text-transform: capitalize;
+  text-decoration: underline;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-info-patient {
+  border: 2px solid #F77A57;
+  border-radius: 8px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alerte-allergie {
+  color: red;
 }

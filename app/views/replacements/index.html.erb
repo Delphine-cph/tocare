@@ -1,15 +1,50 @@
 <h4 class= "text-center">Voici le résultat de ta demande</h4>
 
-<% @users.each do |user| %>
-  <div class="card-product">
-    <%= image_tag user.photo %>
-    <div class="card-product-infos">
-      <h2> <%= user.first_name %> </h2>
-      <h2> <%= user.last_name %> </h2>
-      <p><%= user.arrondissement %></p>
+
+<div class="card-products">
+  <% @replacements.each do |user, replacements| %>
+    <button class="card-product" data-bs-toggle="modal" data-bs-target="#myModal<%= user.id %>">
+    <div class="card-product">
+      <%= image_tag user.photo %>
+      <div class="card-product-infos">
+        <h2> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %> </h2>
+        <p> Arrondissement : <%= user.arrondissement %></p>
+        <% replacements.each do |replacement| %>
+          <p><%= replacement.patient.first_name %></p>
+        <% end  %>
+        </div>
+      </div>
+    </button>
+
+    <!-- Modal view user -->
+    <div class="modal fade" id="myModal<%= user.id %>">
+        <div class="modal-dialog mx-4">
+          <div class="modal-content font-modal">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title ml-4"> <strong> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %></strong> </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+              <%= image_tag user.photo, class: "avatar", style: "width: 100px; border:" %>
+                <div class="card-user mt-3">
+                  <ul class="ml-0"> <strong>Notation :</strong>
+                    <% 5.times do %>
+                      <li class="list-in-line"><i class="fas fa-star"></i></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
+                <p> <strong>Description:</strong> <%= user.description %></p>
+              </div>
+              <!-- Modal footer -->
+          </div>
+        </div>
     </div>
-  </div>
-<% end %>
+
+  <% end %>
+</div>
 
 
 <!-- Button trigger modal -->
@@ -17,12 +52,12 @@
   Je valide
 </button>
 
-<!-- Modal -->
+<!-- Modal button valider -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ta demande à bien était prise en compte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ta demande a bien été prise en compte</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

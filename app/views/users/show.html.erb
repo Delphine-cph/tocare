@@ -19,8 +19,8 @@
 
 <div class="container">
   <p><strong>Secteur:</strong> <%= @user.arrondissement %></p>
-  <p><strong>Equipe:</strong> Mathieu RMN </p>
-  <p><strong>Description:</strong> Infirmière libérale depuis 3 ans. <br/> Je travaille dans le secteur du 11ème arrond. de Marseille.</p>
+  <p><strong>Equipe:</strong> Marie A. </p>
+  <p><strong>Description:</strong> <%= @user.description %></p>
 
   <p> <strong>Soins:</strong></p>
   <div class="profile-card-tags">
@@ -35,3 +35,5 @@
     <div class="tag-soins">TTT</div>
   </div>
 </div>
+
+<strong><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item mt-3" %></strong>

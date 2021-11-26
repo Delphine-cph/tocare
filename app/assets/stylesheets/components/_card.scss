@@ -30,47 +30,6 @@
   font-size: 20px;
 }
 
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  margin: 10px 15px;
-  margin-bottom: 22px;
-}
-
-.card-product img {
-  height: 79%;
-  width: 92px;
-  object-fit: cover;
-  border-radius: 50px;
-  margin-left: 9px;
-}
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-  margin-left: 2px;
-  text-transform: capitalize;
-  text-decoration: underline;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
-
 .card-info-patient {
   border: 2px solid #F77A57;
   border-radius: 8px;
@@ -81,4 +40,34 @@
 
 .alerte-allergie {
   color: red;
+}
+
+.cards-remplacent {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.avatar-card {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.patient-remplacement {
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.border-patient {
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 05px;
+  background-color: #E9F1FF;
+  opacity: 0.7;
+}
+
+.underline {
+  text-decoration: underline;
 }

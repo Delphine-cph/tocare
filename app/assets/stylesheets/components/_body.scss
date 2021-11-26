@@ -1,11 +1,5 @@
-body {
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
 .content-wrapper {
-  flex-grow: 1;
-  overflow-y: auto;
+  min-height: calc(100vh - 120px - 1rem);
+  margin-bottom: 70px;
+  padding: 5px 30px;
 }

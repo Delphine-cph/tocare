@@ -53,7 +53,7 @@ user4 = User.create!(
   adeli_number: "1034HIT",
   arrondissement: "13011",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
-)
+
 
 patient1 = Patient.create!(
   first_name: "Paul",

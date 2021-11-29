@@ -38,6 +38,12 @@
                 </div>
                 <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
                 <p> <strong>Description:</strong> <%= user.description %></p>
+              <!-- TODO IF MESSAGE PRIVE -->
+                <% if Chatroom.find_chatroom(current_user, user) %>
+                  <%= link_to "Message", chatroom_path(Chatroom.find_chatroom(current_user, user)) %>
+                <% else %>
+                  <%= link_to "Message", chatrooms_path(id: user.id), method: :post %>
+                <% end %>
               </div>
               <!-- Modal footer -->
           </div>

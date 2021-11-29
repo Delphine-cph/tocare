@@ -64,7 +64,7 @@ patient1 = Patient.create!(
   last_name: "Souza",
   soin: "Douche",
   age: "72",
-  adress: "9 rue de la fontaine 13004",
+  adress: "9 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909875",
   telephone_family: "0783615473"
@@ -72,10 +72,10 @@ patient1 = Patient.create!(
 
 patient2 = Patient.create!(
   first_name: "Georgette",
-  last_name: "Salers",
+  last_name: "Soler",
   soin: "Injection s/c",
   age: "86",
-  adress: "56 bd de la tonnelle 13001",
+  adress: "56 bd de la tonnelle 13011",
   genre: "F",
   telephone_number: "0775939178",
   telephone_family: "0666166145"
@@ -86,18 +86,18 @@ patient3 = Patient.create!(
   last_name: "Saras",
   soin: "Douche",
   age: "88",
-  adress: "23 rue de la sinécure 13004",
+  adress: "23 rue de la sinécure 13011",
   genre: "F",
   telephone_number: "0781648810",
   telephone_family: "0761935936"
 )
 
-patient4 = Patient.create!(
+patient4 = Patient.create!
   first_name: "Hugo",
   last_name: "Compain",
   soin: "Pansement",
   age: "75",
-  adress: "12 rue du corbeau 13003",
+  adress: "12 rue du corbeau 13011",
   genre: "M",
   telephone_number: "0668349876",
   telephone_family: "0726187316"
@@ -108,7 +108,7 @@ patient5 = Patient.create!(
   last_name: "Miel",
   soin: "Douche",
   age: "81",
-  adress: "22 rue de la fontaine 13004",
+  adress: "22 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909877",
   telephone_family: "0754624583"
@@ -119,7 +119,7 @@ patient6 = Patient.create!(
   last_name: "Dalleau",
   soin: "Dialyse",
   age: "75",
-  adress: "92 avenue Lauraine 13010",
+  adress: "92 avenue Lauraine 13011",
   genre: "M",
   telephone_number: "0629109878",
   telephone_family: "0641947652"
@@ -130,7 +130,7 @@ patient7 = Patient.create!(
   last_name: "Feta",
   soin: "Douche",
   age: "67",
-  adress: "30 rue sainte-croix 13006",
+  adress: "30 rue sainte-croix 13011",
   genre: "M",
   telephone_number: "0678909879",
   telephone_family: "0736513486"
@@ -141,7 +141,7 @@ patient8 = Patient.create!(
   last_name: "Dugrin",
   soin: "Pansement",
   age: "76",
-  adress: "64 rue de toulouse 13009",
+  adress: "64 rue de toulouse 13011",
   genre: "M",
   telephone_number: "0678909815",
   telephone_family: "0691432657"
@@ -152,7 +152,7 @@ patient9 = Patient.create!(
   last_name: "Claros",
   soin: "Douche",
   age: "87",
-  adress: "67 rue fimeux 13012",
+  adress: "67 rue fimeux 13011",
   telephone_number: "0678909825",
   genre: "M",
   telephone_family: "0792514525"
@@ -185,7 +185,7 @@ patient12 = Patient.create!(
   last_name: "Talosi",
   soin: "Surveillance de la glycémie",
   age: "75",
-  adress: "97 rue faley 13007",
+  adress: "97 rue faley 13011",
   genre: "M",
   telephone_number: "0678909895",
   telephone_family: "0739461825"
@@ -196,7 +196,7 @@ patient13 = Patient.create!(
   last_name: "Falomo",
   soin: "Pansement ulcère",
   age: "85",
-  adress: "99 rue jilo 13005",
+  adress: "99 rue jilo 13011",
   genre: "M",
   telephone_number: "0769500975",
   telephone_family: "0739164875"
@@ -218,7 +218,7 @@ patient15 = Patient.create!(
   last_name: "Sisco",
   soin: "Douche",
   age: "45",
-  adress: "109 rue de la faim 13007",
+  adress: "109 rue de la faim 13011",
   genre: "M",
   telephone_number: "0783167875",
   telephone_family: "0794961895"

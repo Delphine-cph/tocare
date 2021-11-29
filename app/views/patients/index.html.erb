@@ -3,11 +3,12 @@
 
 
 <div class= "action-buttons my-4">
-  <strong><%= link_to "Transmissions", "#", class: "card-actions" %></strong>
+
   <strong><%= link_to "+", "#", class: "card-actions" %></strong>
 </div>
 
 <% @patients.each do |patient| %>
+
   <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
       <div class="d-flex justify-content-between">

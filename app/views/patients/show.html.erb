@@ -4,7 +4,7 @@
 <h1 class="text-center"><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
 <p class="text-center">_________________________________________</p>
 
-
+<strong><%= link_to "Transmissions", patient_transmissions_path(@patient), class: "card-actions" %></strong>
   <div class="card-info-patient">
   <h4><i class="fas fa-info-circle"></i></h4>
     <div><strong> Age:</strong> <%= @patient.age %> ans</div>

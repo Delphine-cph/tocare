@@ -7,8 +7,14 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
   end
 
-  def edit
-    @patient = Patient.find(params[:id])
+  def new
+    @patient = Patient.new
+  end
+
+  def create
+    @patient = Patient.new(patient_params)
+    @patient.save
+    redirect_to patient_path(@patient)
   end
 
   def update
@@ -26,7 +32,6 @@ class PatientsController < ApplicationController
   private
 
   def patient_params
-    params.require(:patient).permit(:first_name, :last_name, :adress, :soin, :age)
+    params.require(:patient).permit(:first_name, :last_name, :adress, :telephone_number, :telephone_family, :soin, :genre, :birthday, :treatment, :atcd, :allergy)
   end
-
 end

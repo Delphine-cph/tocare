@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   resources :patients do
     resources :transmissions, only: [:create, :index]
   end
-  resources :replacements, only: %w[new create index]
+  resources :replacements, only: %w[new create index] do
+    collection do
+      get 'status_accepted'
+    end
+  end
   resources :chatrooms, only: %i[index show] do
     resources :messages, only: :create
   end

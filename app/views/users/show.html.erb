@@ -35,5 +35,9 @@
     <div class="tag-soins">TTT</div>
   </div>
 </div>
+<% @pending_replacements_as_substitute.keys.each do |key| %>
+  <h4><%= key.first_name %> (<%= @pending_replacements_as_substitute[key].count %> Remplacements)</h4>
+  <%= link_to 'valider', status_accepted_replacements_path(owner_id: key.id) %>
+<% end %>
 
 <strong><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item mt-3" %></strong>

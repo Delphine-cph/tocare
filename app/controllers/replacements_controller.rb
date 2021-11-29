@@ -11,7 +11,6 @@ class ReplacementsController < ApplicationController
     # if @replacements.empty?
     #   flash[:notice] = 'Pas de correspondance trouvée'
     # end
-
   end
 
   def status_accepted

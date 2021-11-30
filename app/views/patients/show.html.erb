@@ -1,17 +1,15 @@
-<%= link_to patients_path, class:"arrow" do %>
+<%= link_to patients_path, class:"arrow mt-0" do %>
   <i class="fas fa-long-arrow-alt-left"></i>
 <% end %>
 
-<h1><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h1>
-<h4><%= @patient.birthday %></h4>
+<h2><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h2>
+<p><%= @patient.birthday %></>
 
 
-  <div class="card-info-patient">
-  <h4><i class="fas fa-info-circle"></i></h4>
-    <div><strong> Age:</strong> <%= @patient.age %> ans</div>
-    <div><strong>Adresse:</strong> <%= @patient.adress %></div>
-    <div><strong>Tél:</strong> <%= @patient.telephone_number %></div>
-    <div><strong>Contact:</strong> <%= @patient.telephone_family %></div>
+  <div class="card-info-patient p-3">
+    <p><i class="fas fa-map-marker-alt"></i> <%= @patient.adress %></p>
+    <p><i class="fas fa-phone-alt"></i> <%= @patient.telephone_number %></p>
+    <p><i class="far fa-address-book"></i> <%= @patient.telephone_family %></p>
   </div>
 
   <div class="card-info-patient">

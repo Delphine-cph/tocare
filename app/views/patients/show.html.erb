@@ -1,8 +1,9 @@
-<%= link_to "<", patients_path, class: "btn btn-retour" %>
+<%= link_to patients_path do %>
+<i class="fas fa-arrow-left"></i>
+<% end %>
 
 
-<h1 class="text-center"><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
-<p class="text-center">_________________________________________</p>
+<h1><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
 
 <strong><%= link_to "Transmissions", patient_transmissions_path(@patient), class: "card-actions" %></strong>
 
@@ -16,20 +17,16 @@
 
   <div class="card-info-patient">
     <h4><i class="fas fa-user-nurse"></i></h4>
-    <p>Marie, Pauline</p>
+    <p>Victoria Capin</p>
   </div>
 
   <div class="card-info-patient">
     <h4><i class="fas fa-business-time"></i></h4>
-    <ul>
-      <li>PTG en mai 2020</li>
-      <li>HTA</li>
-      <li>Cataracte</li>
-    </ul>
+    <strong></strong> <%= @patient.atcd %>
   </div>
 
-  <div class="card-info-patient alerte-allergie">
-    <h4><i class="fas fa-allergies">  ALLERGIES : IODE</i></h4>
+  <div class="card-info-patient">
+    <h4><i class="fas fa-allergies">  ALLERGIES : <%= @patient.allergy %></i></h4>
   </div>
 
   <div class="card-info-patient">
@@ -42,12 +39,7 @@
 
   <div class="card-info-patient">
     <h4><i class="fas fa-hand-holding-medical"></i></h4>
-    <ul>
-      <li>Aide à la toilette</li>
-      <li>TA 1/jour</li>
-      <li>Pillulier</li>
-      <li>Pansement ulcère jambe gauche</li>
-    </ul>
+    <%= @patient.soin %>
   </div>
 
   <div class="card-info-patient">

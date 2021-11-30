@@ -89,10 +89,10 @@ patient2 = Patient.create!(
 
 patient3 = Patient.create!(
   first_name: "Alice",
-  last_name: "Saras",
-  soin: "Douche",
+  last_name: "Savin",
   birthday: "10/04/1933",
   soin: "aide à la toilette",
+  atcd: "0",
   allergy: "Pollens",
   age: "88",
   adress: "11 Bd du Général Raymond",
@@ -102,7 +102,7 @@ patient3 = Patient.create!(
 )
 
 patient4 = Patient.create!(
-  first_name: "Hugo",
+  first_name:"Hugo",
   last_name: "Compain",
   soin: "Surveillance glycémie x2 /jour",
   atcd: "Diabète de type 2",
@@ -147,8 +147,7 @@ patient7 = Patient.create!(
   first_name: "Jules",
   last_name: "Fertado",
   soin: "Pansement complexe dos avec ablation d'agrafes",
-  atcd: "Opération du canal lombaire étroit le 10/11/21, asthme"
-  allergy: "Topalgic",
+  atcd: "Opération du canal lombaire étroit le 10/11/21, asthme",
   age: "67",
   birthday: "10/07/1954",
   adress: "18 traverse de la resclave 13011",
@@ -160,7 +159,7 @@ patient7 = Patient.create!(
 patient8 = Patient.create!(
   first_name: "Thomas",
   last_name: "Dugrin",
-  atcd: "Diabète de type 1 avec pompe à insuline, HTA"
+  atcd: "Diabète de type 1 avec pompe à insuline, HTA",
   soin: "Surveillance glycémie x3/jour, surveillance TA",
   allergy: "0",
   age: "76",
@@ -174,94 +173,106 @@ patient8 = Patient.create!(
 patient9 = Patient.create!(
   first_name: "Andrea",
   last_name: "Claros",
-  soin: "Douche",
+  soin: "Aide à la toilette",
+  atcd: "cataracte x2, appendicectomie en 1996",
   age: "87",
-  adress: "67 rue fimeux 13011",
+  allergy: "lamaline",
+  birthday: "16/09/1945",
+  adress: "66 Avenue Emmanuel Allard 13011",
   telephone_number: "0678909825",
   genre: "M",
-  telephone_family: "0792514525"
+  telephone_family: "Petite-fille: 0792514525"
 )
 
 patient10 = Patient.create!(
   first_name: "Adrien",
-  last_name: "Cozmic",
+  last_name: "Kozmic",
   soin: "Injection s/c",
+  atcd: "fracture humérus gauche le 21/11/24",
+  allergy: "0",
   age: "63",
-  adress: "5 rue de la sauvette 13011",
+  birthday: "19/10/1958",
+  adress: "45 Bd de la Valbarelle 13011",
   genre: "M",
   telephone_number: "0762857875",
-  telephone_family: "0645968217"
+  telephone_family: "Femme: 0645968217"
 )
 
 patient11 = Patient.create!(
   first_name: "Marie",
-  last_name: "Pugnasse",
-  soin: "Pansement",
+  last_name: "Puget",
+  soin: "Injection s/c",
+  atcd: "phlébite le 26/11/21",
+  allergy: "topalgic",
   age: "69",
-  adress: "111 rue bolat 13011",
+  birthday: "19/12/1952",
+  adress: "25 traverse de la sablière 13011",
   genre: "F",
   telephone_number: "0678909835",
-  telephone_family: "0739562135"
+  telephone_family: "Mari: 0739562135"
 )
 
 patient12 = Patient.create!(
   first_name: "Pierre",
   last_name: "Talosi",
-  soin: "Surveillance de la glycémie",
+  soin: "Surveillance de la glycémie, surveillance TA",
+  atcd: "Diabète de type 2, HTA",
   age: "75",
-  adress: "97 rue faley 13011",
+  allergy: "0",
+  birthday: "19/11/1946",
+  adress: "7 Bd Valentin 13011",
   genre: "M",
   telephone_number: "0678909895",
-  telephone_family: "0739461825"
+  telephone_family: "Femme: 0739461825"
 )
 
 patient13 = Patient.create!(
   first_name: "Remi",
   last_name: "Falomo",
-  soin: "Pansement ulcère",
+  soin: "Pansement ulcère jambe gauche",
+  atcd: "Insuffisance veineuse",
   age: "85",
-  adress: "99 rue jilo 13011",
+  birthday: "19/11/1936",
+  allergy: "Iode",
+  adress: "17 Rue Centrale 13011",
   genre: "M",
   telephone_number: "0769500975",
-  telephone_family: "0739164875"
+  telephone_family: "Fils: 0739164875"
 )
 
 patient14 = Patient.create!(
-  first_name: "Jeremy",
-  last_name: "Poloti",
-  soin: "Pansement complexe",
+  first_name: "Georges",
+  last_name: "Politi",
+  soin: "Aide à la toilette",
+  atcd: "BPCO, psoriasis",
   age: "95",
-  adress: "49 rue de la bidelaire 13011",
+  allergy: "Pénicilline",
+  birthday: "19/03/1926",
+  adress: "11 Bd du Général Raymond 13011",
   genre: "M",
   telephone_number: "0678909175",
-  telephone_family: "0619637815"
+  telephone_family: "Fils: 0619637815"
 )
 
 patient15 = Patient.create!(
-  first_name: "Jean-Louis",
+  first_name: "Olivier",
   last_name: "Sisco",
-  soin: "Douche",
+  soin: "Pansement complexe avec redon",
+  atcd: "Ménistectomie 24/11/21, Asthme",
   age: "45",
-  adress: "109 rue de la faim 13011",
+  birthday: "13/05/1926",
+  allergy: "Iode",
+  adress: "13 Rue Raymond Pitet 13011",
   genre: "M",
   telephone_number: "0783167875",
-  telephone_family: "0794961895"
+  telephone_family: "Femme: 0794961895"
 )
 
-replacement1 = Replacement.create!(
+replacement = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
   user: user2,
   patient: patient1,
-  owner: user1,
-  status: "new"
-)
-
-replacement2 = Replacement.create!(
-  start_date: "12/11/2021",
-  end_date: "12/12/2021",
-  user: user2,
-  patient: patient2,
   owner: user1
 )
 

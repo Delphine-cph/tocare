@@ -247,12 +247,20 @@ patient15 = Patient.create!(
   telephone_number: "0783167875",
   telephone_family: "0794961895"
 
-
-replacement = Replacement.create!(
+replacement1 = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
   user: user2,
   patient: patient1,
+  owner: user1,
+  status: "new"
+)
+
+replacement2 = Replacement.create!(
+  start_date: "12/11/2021",
+  end_date: "12/12/2021",
+  user: user2,
+  patient: patient2,
   owner: user1
 )
 

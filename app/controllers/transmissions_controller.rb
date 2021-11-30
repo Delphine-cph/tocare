@@ -1,7 +1,7 @@
 class TransmissionsController < ApplicationController
   def index
     @patient = Patient.find(params[:patient_id])
-    @transmissions = Transmission.where(patient: @patient)
+    @transmissions = Transmission.where(patient: @patient).order(created_at: :desc).group_by{ |u| u.created_at.beginning_of_month }
     @transmission = Transmission.new
   end
 

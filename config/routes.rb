@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
   resources :replacements, only: %w[new create index] do
     collection do
-      get 'status_accepted'
+      post 'status_accepted'
     end
   end
   resources :chatrooms, only: %i[index show] do

@@ -4,14 +4,6 @@
 <h1 class="text-center"><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
 <p class="text-center">_________________________________________</p>
 
-<%= link_to patient_path, method: :delete, data: {confirm: "Are you sure?"} do %>
-  <i class="fas fa-times"></i>
-<% end %>
-
-<%= link_to patient_path, method: :patch do %>
-  <i class="fas fa-edit"></i>
-<% end %>
-
 <strong><%= link_to "Transmissions", patient_transmissions_path(@patient), class: "card-actions" %></strong>
 
   <div class="card-info-patient">

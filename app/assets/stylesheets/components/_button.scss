@@ -71,7 +71,8 @@
   align-items: center;
   justify-content: space-around;
   margin-right: 20px;
-  width: 90vw;
+  width: 85vw;
+  margin-left: 11px;
 }
 
 .btn-transm {
@@ -89,4 +90,8 @@
   bottom: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.marge-page {
+  margin-bottom: 70px;
 }

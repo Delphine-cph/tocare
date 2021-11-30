@@ -1,6 +1,9 @@
-<h3>Mes Patients</h3>
-<div class= "action-buttons my-2"></div>
+<div class="d-flex justify-content-between align-items-center">
+  <h3>Mes Patients</h3>
+  <%= link_to "Ajouter +", "#", class: "btn-ajout" %>
+</div>
 
+<div class= "action-buttons my-2"></div>
 <% @patients.each do |patient| %>
 
   <div class="cards-patient">

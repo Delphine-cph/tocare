@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :transmissions, only: [:create, :index]
   end
   resources :replacements, only: %w[new create index]
-  resources :chatrooms, only: %i[index show] do
+  resources :chatrooms, only: %i[index show create] do
     resources :messages, only: :create
   end
 end

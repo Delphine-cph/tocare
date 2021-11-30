@@ -19,7 +19,7 @@ user1 = User.create!(
   email: "delphine@gmail.com",
   password: "delphine",
   first_name: "delphine",
-  last_name: "cph",
+  last_name: "Chang-pi-hin",
   adeli_number: "1234EFT",
   arrondissement: "13011",
   description: "Infirmière depuis 3 ans, je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
@@ -30,7 +30,7 @@ user2 = User.create!(
   email: "mathieu@gmail.com",
   password: "mathieu",
   first_name: "mathieu",
-  last_name: "Rmn",
+  last_name: "Romano",
   adeli_number: "1290TFT",
   arrondissement: "13011",
   description: "Infirmier depuis 2 ans à l'hôpital, en parallèle je suis remplaçant en libéral.",
@@ -41,7 +41,7 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Roh",
+  last_name: "Ancian",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 3 ans en chirurgie ambulatoire, en parallèle je suis remplaçant en libéral.",
@@ -52,7 +52,7 @@ user4 = User.create!(
   email: "lucien@gmail.com",
   password: "lucien",
   first_name: "lucien",
-  last_name: "ph",
+  last_name: "Dupré",
   adeli_number: "1034HIT",
   arrondissement: "13011",
   description: "Infirmier libéral depuis 4 ans dans le 13011, je suis disponible pour faire des remplacements.",
@@ -92,7 +92,7 @@ patient3 = Patient.create!(
   telephone_family: "0761935936"
 )
 
-patient4 = Patient.create!
+patient4 = Patient.create!(
   first_name: "Hugo",
   last_name: "Compain",
   soin: "Pansement",
@@ -222,13 +222,22 @@ patient15 = Patient.create!(
   genre: "M",
   telephone_number: "0783167875",
   telephone_family: "0794961895"
+)
 
-
-replacement = Replacement.create!(
+replacement1 = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
   user: user2,
   patient: patient1,
+  owner: user1,
+  status: "new"
+)
+
+replacement2 = Replacement.create!(
+  start_date: "12/11/2021",
+  end_date: "12/12/2021",
+  user: user2,
+  patient: patient2,
   owner: user1
 )
 

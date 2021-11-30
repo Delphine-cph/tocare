@@ -1,59 +1,59 @@
 <div class="marge-page">
-<%= link_to patients_path, class:"arrow mt-0" do %>
-  <i class="fas fa-long-arrow-alt-left"></i>
-<% end %>
+  <%= link_to patients_path, class:"arrow mt-0" do %>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  <% end %>
 
-<h2><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h2>
-<h5><%= @patient.birthday %></h5>
+  <h2><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h2>
+  <p><%= @patient.birthday %></p>
 
 
-<div class="card-info-patient p-3">
-  <p><i class="fas fa-map-marker-alt"></i> <%= @patient.adress %></p>
-  <p><i class="fas fa-mobile-alt"></i> <%= @patient.telephone_number %></p>
-  <p><i class="far fa-address-book"></i> <%= @patient.telephone_family %></p>
-</div>
-
-<p class="mt-3"><strong>Infirmières référentes</strong><p>
-<div class="card-info-patient p-3 mb-3">
-  <div class="d-flex">
-    <%= image_tag "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512", class:"avatar" %>
-    <p><strong>Delphine Chang-pi-hin</strong></p>
-    </div>
-</div>
-<div class="card-info-patient p-3 mb-3">
-  <div class="d-flex">
-    <%= image_tag "https://scontent.fcdg3-1.fna.fbcdn.net/v/t1.18169-9/31144086_1629633837113225_5971500848746001918_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=RWNn3ZmW4sQAX-DXvl7&_nc_ht=scontent.fcdg3-1.fna&oh=a18641a80ccc72b55e6ab8da888dde69&oe=61CE199F", class:"avatar" %>
-    <p><strong>Victoria Schintu</strong></p>
-    </div>
-</div>
-
-<p class="mt-3"><strong>Antécédents</strong><p>
-<div class="card-info-patient">
-  <strong></strong> <%= @patient.atcd %>
-</div>
-
-<p class="mt-3"><strong>Allergies</strong><p>
-<div class="card-info-patient">
-<%= @patient.allergy %>
-</div>
-
-<p class="mt-3"><strong>Traitements</strong><p>
-<div class="card-info-patient">
-  <%= @patient.treatment %>
-</div>
-
-<p class="mt-3"><strong>Soins</strong><p>
-<div class="card-info-patient">
-  <%= @patient.soin %>
-</div>
-
-<!-- Button trigger modal -->
-<div class="two-button">
-  <%= link_to "Transmissions", patient_transmissions_path(@patient), class: "btn-transm" %>
-  <div type="button" class="btn-transm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  +
+  <div class="card-info-patient p-3">
+    <p><i class="fas fa-map-marker-alt"></i> <%= @patient.adress %></p>
+    <p><i class="fas fa-mobile-alt"></i> <%= @patient.telephone_number %></p>
+    <p><i class="far fa-address-book"></i> <%= @patient.telephone_family %></p>
   </div>
+
+  <h5 class="mt-3"><strong>Infirmières référentes</strong></h5>
+  <div class="card-info-patient mb-3">
+    <div class="d-flex">
+      <%= image_tag "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512", class:"avatar" %>
+      <p><strong>Delphine Chang-pi-hin</strong></p>
+      </div>
+  </div>
+  <div class="card-info-patient mb-3">
+    <div class="d-flex">
+      <%= image_tag "https://scontent.fcdg3-1.fna.fbcdn.net/v/t1.18169-9/31144086_1629633837113225_5971500848746001918_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=RWNn3ZmW4sQAX-DXvl7&_nc_ht=scontent.fcdg3-1.fna&oh=a18641a80ccc72b55e6ab8da888dde69&oe=61CE199F", class:"avatar" %>
+      <p><strong>Victoria Schintu</strong></p>
+      </div>
+  </div>
+
+  <h5 class="mt-3"><strong>Antécédents</strong></h5>
+  <div class="card-info-patient">
+    <strong></strong> <%= @patient.atcd %>
+  </div>
+
+  <h5 class="mt-3"><strong>Allergies</strong></h5>
+  <div class="card-info-patient">
+  <%= @patient.allergy %>
+  </div>
+
+  <h5 class="mt-3"><strong>Traitements</strong></h5>
+  <div class="card-info-patient">
+    <%= @patient.treatment %>
+  </div>
+
+  <h5 class="mt-3"><strong>Soins</strong></h5>
+  <div class="card-info-patient">
+    <%= @patient.soin %>
 </div>
+
+  <!-- Button trigger modal -->
+  <div class="two-button">
+    <%= link_to "Transmissions", patient_transmissions_path(@patient), class: "btn-transm" %>
+    <div type="button" class="btn-transm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    +
+    </div>
+  </div>
 
 </div>
 

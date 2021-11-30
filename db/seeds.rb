@@ -22,7 +22,7 @@ user1 = User.create!(
   last_name: "Chang-pi-hin",
   adeli_number: "1234EFT",
   arrondissement: "13011",
-  description: "Infirmière depuis 3 ans, je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
+  description: "Infirmière depuis 6 ans je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
   photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512"
 )
 
@@ -41,10 +41,10 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Ancian",
+  last_name: "Le kennec",
   adeli_number: "9934EFT",
   arrondissement: "13011",
-  description: "Infirmier depuis 3 ans en chirurgie ambulatoire, en parallèle je suis remplaçant en libéral.",
+  description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
 )
 

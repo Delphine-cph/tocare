@@ -15,14 +15,14 @@
   </ul>
 </div>
 
-<p class="text-center">_________________________________</p>
-
 <div class="container">
-  <p><strong>Secteur:</strong> <%= @user.arrondissement %></p>
-  <p><strong>Equipe:</strong> Marie A. </p>
-  <p><strong>Description:</strong> <%= @user.description %></p>
+  <div class="card-secteur">
+    <div><strong>Secteur :</strong> <%= @user.arrondissement %></div>
+    <div><strong>Equipe :</strong> Marie A.</div>
+  </div>
+  <div class="description"><strong>Description :</strong> <%= @user.description %></div>
 
-  <p> <strong>Soins:</strong></p>
+  <p class="left-margin"> <strong>Soins :</strong></p>
   <div class="profile-card-tags">
     <div class="tag-soins">Pansements</div>
     <div class="tag-soins">Toilette</div>

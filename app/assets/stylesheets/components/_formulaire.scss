@@ -1,11 +1,16 @@
 .formulaire {
-  background-color: white;
+  background-color:#F2F3F4;
   box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
   padding: 30px 10px;
   border-radius: 8px;
+  font-size: 22px;
 }
 
 .div-center {
   display: block;
   margin : auto;
+}
+
+.form-container {
+  padding:60px 0px;
 }

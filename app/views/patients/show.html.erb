@@ -4,9 +4,10 @@
 <h1 class="text-center"><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></h1>
 <p class="text-center">_________________________________________</p>
 
+<strong><%= link_to "Transmissions", patient_transmissions_path(@patient), class: "card-actions" %></strong>
 
   <div class="card-info-patient">
-  <h4>INFORMATIONS</h4>
+  <h4><i class="fas fa-info-circle"></i></h4>
     <div><strong> Age:</strong> <%= @patient.age %> ans</div>
     <div><strong>Adresse:</strong> <%= @patient.adress %></div>
     <div><strong>Tél:</strong> <%= @patient.telephone_number %></div>
@@ -14,12 +15,12 @@
   </div>
 
   <div class="card-info-patient">
-    <h4>IDEL référents: </h4>
+    <h4><i class="fas fa-user-nurse"></i></h4>
     <p>Marie, Pauline</p>
   </div>
 
   <div class="card-info-patient">
-    <h4>ATCDS</h4>
+    <h4><i class="fas fa-business-time"></i></h4>
     <ul>
       <li>PTG en mai 2020</li>
       <li>HTA</li>
@@ -28,11 +29,11 @@
   </div>
 
   <div class="card-info-patient alerte-allergie">
-    <h4>ALLERGIES : IODE</h4>
+    <h4><i class="fas fa-allergies">  ALLERGIES : IODE</i></h4>
   </div>
 
   <div class="card-info-patient">
-    <h4>TRAITEMENTS</h4>
+    <h4><i class="fas fa-capsules"></i></h4>
     <ul>
       <li>Amlor 30 (1 - 0 - 1)</li>
       <li>Paracétamol 1g ALD</li>
@@ -40,7 +41,7 @@
   </div>
 
   <div class="card-info-patient">
-    <h4>SOINS</h4>
+    <h4><i class="fas fa-hand-holding-medical"></i></h4>
     <ul>
       <li>Aide à la toilette</li>
       <li>TA 1/jour</li>
@@ -50,6 +51,7 @@
   </div>
 
   <div class="card-info-patient">
+
     <h4>DERNIERES TRANSMISSIONS</h4>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

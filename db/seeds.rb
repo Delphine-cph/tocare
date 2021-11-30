@@ -180,10 +180,8 @@ patient9 = Patient.create!(
   birthday: "16/09/1945",
   adress: "66 Avenue Emmanuel Allard 13011",
   telephone_number: "0678909825",
-
   genre: "F",
   telephone_family: "Petite-fille: 0792514525"
-
 )
 
 patient10 = Patient.create!(

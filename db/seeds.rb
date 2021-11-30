@@ -22,7 +22,7 @@ user1 = User.create!(
   last_name: "Chang-pi-hin",
   adeli_number: "1234EFT",
   arrondissement: "13011",
-  description: "Infirmière depuis 3 ans, je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
+  description: "Infirmière depuis 6 ans je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
   photo: "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512"
 )
 
@@ -41,10 +41,10 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Ancian",
+  last_name: "Le kennec",
   adeli_number: "9934EFT",
   arrondissement: "13011",
-  description: "Infirmier depuis 3 ans en chirurgie ambulatoire, en parallèle je suis remplaçant en libéral.",
+  description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",
   photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
 )
 
@@ -60,15 +60,15 @@ user4 = User.create!(
 )
 
 patient1 = Patient.create!(
-  first_name: "Paul",
-  last_name: "Souza",
+  first_name: "Agnès",
+  last_name: "Demougeot",
   soin: "Aide à la toilette",
   atcd: "Opération de la cataracte bilatérale",
   allergy: "0",
   age: "72",
   birthday: "05/03/1949",
   adress: "9 rue de la fontaine 13011",
-  genre: "M",
+  genre: "F",
   telephone_number: "0678909875",
   telephone_family: "Fille : 0783615473"
 )
@@ -102,8 +102,8 @@ patient3 = Patient.create!(
 )
 
 patient4 = Patient.create!(
-  first_name:"Hugo",
-  last_name: "Compain",
+  first_name: "Hugo",
+  last_name: "Compan",
   soin: "Surveillance glycémie x2 /jour",
   atcd: "Diabète de type 2",
   birthday: "10/02/1946",
@@ -117,7 +117,7 @@ patient4 = Patient.create!(
 
 patient5 = Patient.create!(
   first_name: "Pierre",
-  last_name: "Mielon",
+  last_name: "Mirot",
   atcd: "HTA, Extraction dentaire, PTH droite",
   soin: "Douche, surveillance TA",
   allergy: "0",
@@ -130,15 +130,15 @@ patient5 = Patient.create!(
 )
 
 patient6 = Patient.create!(
-  first_name: "Louis",
+  first_name: "Louise",
   last_name: "Dalleau",
   atcd: "Insuffisance rénale sévère, HTA",
   soin: "Dialyse péritonéale, surveillance TA",
   allergy: "0",
   age: "75",
+  adress: "92 avenue Lauraine 13011",
+  genre: "F",
   birthday: "29/07/1946",
-  adress: "58 avenue vincent andreu 13011",
-  genre: "M",
   telephone_number: "0629109878",
   telephone_family: "Fille: 0641947652"
 )
@@ -171,8 +171,8 @@ patient8 = Patient.create!(
 )
 
 patient9 = Patient.create!(
-  first_name: "Andrea",
-  last_name: "Claros",
+  first_name: "Marcelle",
+  last_name: "Clapot",
   soin: "Aide à la toilette",
   atcd: "cataracte x2, appendicectomie en 1996",
   age: "87",
@@ -180,8 +180,10 @@ patient9 = Patient.create!(
   birthday: "16/09/1945",
   adress: "66 Avenue Emmanuel Allard 13011",
   telephone_number: "0678909825",
-  genre: "M",
+
+  genre: "F",
   telephone_family: "Petite-fille: 0792514525"
+
 )
 
 patient10 = Patient.create!(

@@ -1,10 +1,11 @@
 .card-product {
   overflow: hidden;
   height: 140px;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.07);
   display: flex;
   align-items: center;
   padding-left: 10px;
+  background-color: rgba(55, 55, 55, 0.08);
+  border-radius: 10px;
 
   img {
   width: 90px;

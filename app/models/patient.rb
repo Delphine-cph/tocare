@@ -5,9 +5,6 @@ class Patient < ApplicationRecord
   validates :adress, presence: true
   has_many :cares, dependent: :destroy
   has_many :replacements, dependent: :destroy
-  acts_as_taggable_on :atcds
-  acts_as_taggable_on :treatments
-  acts_as_taggable_on :soins
 
   def display_name
     "#{last_name.upcase} #{first_name.capitalize}"

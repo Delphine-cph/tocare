@@ -18,7 +18,7 @@ Patient.destroy_all
 user1 = User.create!(
   email: "delphine@gmail.com",
   password: "delphine",
-  first_name: "delphine",
+  first_name: "Delphine",
   last_name: "Chang-pi-hin",
   adeli_number: "1234EFT",
   arrondissement: "13011",
@@ -29,7 +29,7 @@ user1 = User.create!(
 user2 = User.create!(
   email: "mathieu@gmail.com",
   password: "mathieu",
-  first_name: "mathieu",
+  first_name: "Mathieu",
   last_name: "Romano",
   adeli_number: "1290TFT",
   arrondissement: "13011",
@@ -62,89 +62,113 @@ user4 = User.create!(
 patient1 = Patient.create!(
   first_name: "Paul",
   last_name: "Souza",
-  soin: "Douche",
+  soin: "Aide à la toilette",
+  atcd: "Opération de la cataracte bilatérale",
+  allergy: "0",
   age: "72",
+  birthday: "05/03/1949",
   adress: "9 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909875",
-  telephone_family: "0783615473"
+  telephone_family: "Fille : 0783615473"
 )
 
 patient2 = Patient.create!(
   first_name: "Georgette",
   last_name: "Soler",
-  soin: "Injection s/c",
+  soin: "Pansement genou droit, aide à la toilette",
+  atcd: "0",
+  allergy: "Iode",
+  birthday: "06/01/1935",
   age: "86",
-  adress: "56 bd de la tonnelle 13011",
+  adress: "56 bd de la valbarelle Bat D 13011",
   genre: "F",
   telephone_number: "0775939178",
-  telephone_family: "0666166145"
+  telephone_family: "Fils : 0666166145"
 )
 
 patient3 = Patient.create!(
   first_name: "Alice",
   last_name: "Saras",
   soin: "Douche",
+  birthday: "10/04/1933",
+  soin: "aide à la toilette",
+  allergy: "Pollens",
   age: "88",
-  adress: "23 rue de la sinécure 13011",
+  adress: "11 Bd du Général Raymond",
   genre: "F",
   telephone_number: "0781648810",
-  telephone_family: "0761935936"
+  telephone_family: "Fille : 0761935936"
 )
 
 patient4 = Patient.create!
   first_name: "Hugo",
   last_name: "Compain",
-  soin: "Pansement",
+  soin: "Surveillance glycémie x2 /jour",
+  atcd: "Diabète de type 2",
+  birthday: "10/02/1946",
+  allergy: "Pénicilline",
   age: "75",
-  adress: "12 rue du corbeau 13011",
+  adress: "12 route des camoins 13011",
   genre: "M",
   telephone_number: "0668349876",
-  telephone_family: "0726187316"
+  telephone_family: "Fils: 0726187316"
 )
 
 patient5 = Patient.create!(
   first_name: "Pierre",
-  last_name: "Miel",
-  soin: "Douche",
+  last_name: "Mielon",
+  atcd: "HTA, Extraction dentaire, PTH droite",
+  soin: "Douche, surveillance TA",
+  allergy: "0",
   age: "81",
+  birthday: "10/07/1940",
   adress: "22 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909877",
-  telephone_family: "0754624583"
+  telephone_family: "Neveu: 0754624583"
 )
 
 patient6 = Patient.create!(
   first_name: "Louis",
   last_name: "Dalleau",
-  soin: "Dialyse",
+  atcd: "Insuffisance rénale sévère, HTA",
+  soin: "Dialyse péritonéale, surveillance TA",
+  allergy: "0",
   age: "75",
-  adress: "92 avenue Lauraine 13011",
+  birthday: "29/07/1946",
+  adress: "58 avenue vincent andreu 13011",
   genre: "M",
   telephone_number: "0629109878",
-  telephone_family: "0641947652"
+  telephone_family: "Fille: 0641947652"
 )
 
 patient7 = Patient.create!(
   first_name: "Jules",
-  last_name: "Feta",
-  soin: "Douche",
+  last_name: "Fertado",
+  soin: "Pansement complexe dos avec ablation d'agrafes",
+  atcd: "Opération du canal lombaire étroit le 10/11/21, asthme"
+  allergy: "Topalgic",
   age: "67",
-  adress: "30 rue sainte-croix 13011",
+  birthday: "10/07/1954",
+  adress: "18 traverse de la resclave 13011",
   genre: "M",
   telephone_number: "0678909879",
-  telephone_family: "0736513486"
+  telephone_family: "Fils: 0736513486"
 )
 
 patient8 = Patient.create!(
   first_name: "Thomas",
   last_name: "Dugrin",
-  soin: "Pansement",
+  atcd: "Diabète de type 1 avec pompe à insuline, HTA"
+  soin: "Surveillance glycémie x3/jour, surveillance TA",
+  allergy: "0",
   age: "76",
-  adress: "64 rue de toulouse 13011",
+  birthday: "16/09/1945",
+  adress: "9 traverse de la montre 13011",
   genre: "M",
   telephone_number: "0678909815",
-  telephone_family: "0691432657"
+  telephone_family: "Nièce: 0691432657"
 )
 
 patient9 = Patient.create!(

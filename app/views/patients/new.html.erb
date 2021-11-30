@@ -1,0 +1,15 @@
+<%= simple_form_for(@patient) do |f| %>
+  <%= f.input :first_name, :label => 'Prénom' %>
+  <%= f.input :last_name, :label => 'Nom de famille' %>
+  <%= f.input :birthday, :label => 'Date de naissance' %>
+  <%= f.input :age, :label => 'Age' %>
+  <%= f.input :genre, collection: ['M', 'F'] %>
+  <%= f.input :adress, :label => 'Adresse' %>
+  <%= f.input :telephone_number, :label => 'Numéro de téléphone' %>
+  <%= f.input :telephone_family, :label => 'Contact personne de confiance' %>
+  <%= f.input :treatment_list, :label => 'Traitement', hint: "Séparer les traitements par des virgules" %>
+  <%= f.input :atcd_list, :label => 'Antécédents médicaux et chirurgicaux', hint: "Séparer par des virgules" %>
+  <%= f.input :allergy, :label => 'Allergies' %>
+  <%= f.input :soin_list, :label => 'Soins', hint: "Séparer les soins par des virgules" %>
+  <%= f.submit %>
+<% end %>

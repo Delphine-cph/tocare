@@ -3,6 +3,8 @@
 
 
 <div class= "action-buttons my-4">
+  <strong><%= link_to "Transmissions", "#", class: "card-actions" %></strong>
+  <strong><%= link_to "+", new_patient_path, class: "card-actions" %></strong>
 </div>
 
 <% @patients.each do |patient| %>

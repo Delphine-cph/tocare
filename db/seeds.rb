@@ -60,12 +60,12 @@ user4 = User.create!(
 )
 
 patient1 = Patient.create!(
-  first_name: "Paul",
-  last_name: "Souza",
+  first_name: "Agnès",
+  last_name: "Demougeot",
   soin: "Douche",
   age: "72",
   adress: "9 rue de la fontaine 13011",
-  genre: "M",
+  genre: "F",
   telephone_number: "0678909875",
   telephone_family: "0783615473"
 )
@@ -94,7 +94,7 @@ patient3 = Patient.create!(
 
 patient4 = Patient.create!(
   first_name: "Hugo",
-  last_name: "Compain",
+  last_name: "Compan",
   soin: "Pansement",
   age: "75",
   adress: "12 rue du corbeau 13011",
@@ -105,7 +105,7 @@ patient4 = Patient.create!(
 
 patient5 = Patient.create!(
   first_name: "Pierre",
-  last_name: "Miel",
+  last_name: "Mirot",
   soin: "Douche",
   age: "81",
   adress: "22 rue de la fontaine 13011",
@@ -115,12 +115,12 @@ patient5 = Patient.create!(
 )
 
 patient6 = Patient.create!(
-  first_name: "Louis",
+  first_name: "Louise",
   last_name: "Dalleau",
   soin: "Dialyse",
   age: "75",
   adress: "92 avenue Lauraine 13011",
-  genre: "M",
+  genre: "F",
   telephone_number: "0629109878",
   telephone_family: "0641947652"
 )
@@ -148,13 +148,13 @@ patient8 = Patient.create!(
 )
 
 patient9 = Patient.create!(
-  first_name: "Andrea",
-  last_name: "Claros",
+  first_name: "Marcelle",
+  last_name: "Clapot",
   soin: "Douche",
   age: "87",
   adress: "67 rue fimeux 13011",
   telephone_number: "0678909825",
-  genre: "M",
+  genre: "F",
   telephone_family: "0792514525"
 )
 

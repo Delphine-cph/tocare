@@ -17,7 +17,7 @@
     <% if chatroom.owner == current_user %>
       <p><%= image_tag chatroom.recipient.photo, class: "avatar" %> <%= link_to chatroom.recipient.first_name.capitalize, chatroom_path(chatroom) %></p>
     <% else %>
-      <p><%= image_tag chatroom.owner.photo %> <%= link_to chatroom.owner.first_name.capitalize, chatroom_path(chatroom) %></p>
+      <p><%= image_tag chatroom.owner.photo, class: "avatar" %> <%= link_to chatroom.owner.first_name.capitalize, chatroom_path(chatroom) %></p>
     <% end %>
   </div>
 <% end %>

@@ -1,5 +1,11 @@
 <div class="container chatroom">
+<% if @chatroom.name %>
   <h1>#<%= @chatroom.name.capitalize %></h1>
+<% elsif @chatroom.owner == current_user %>
+  <h1><%= @chatroom.recipient.first_name %></h1>
+<% else %>
+  <h1><%= @chatroom.owner.first_name %></h1>
+<% end %>
 
   <div class="messages"
     data-controller="chatroom-subscription"

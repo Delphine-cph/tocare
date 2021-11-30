@@ -37,7 +37,8 @@ class ReplacementsController < ApplicationController
 
   def status_accepted
     # 1. Je récupère tous les replacements du current user pour le owner_id
-    @replacement = Replacement.where(owner_id: params[:owner_id])
+    @replacement = Replacement.where(user: current_user)
+    
     # 2. Pour chaque replacement, j'update le statut
     @replacement.each do |replacement|
       replacement.update(status: 1)
@@ -45,10 +46,8 @@ class ReplacementsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def status_decline
-    @replacement.mark('Refuser')
-    redirect_to @user
-  end
+
+
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates
 

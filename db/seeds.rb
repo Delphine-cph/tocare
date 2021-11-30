@@ -224,22 +224,22 @@ patient15 = Patient.create!(
   telephone_family: "0794961895"
 )
 
-replacement1 = Replacement.create!(
-  start_date: "12/11/2021",
-  end_date: "12/12/2021",
-  user: user2,
-  patient: patient1,
-  owner: user1,
-  status: "new"
-)
+# replacement1 = Replacement.create!(
+#   start_date: "12/11/2021",
+#   end_date: "12/12/2021",
+#   user: user2,
+#   patient: patient1,
+#   owner: user1,
+#   status: "new"
+# )
 
-replacement2 = Replacement.create!(
-  start_date: "12/11/2021",
-  end_date: "12/12/2021",
-  user: user2,
-  patient: patient2,
-  owner: user1
-)
+# replacement2 = Replacement.create!(
+#   start_date: "12/11/2021",
+#   end_date: "12/12/2021",
+#   user: user2,
+#   patient: patient2,
+#   owner: user1
+# )
 
 care = Care.create!(
   patient: patient1,

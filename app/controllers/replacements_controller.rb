@@ -10,17 +10,12 @@ class ReplacementsController < ApplicationController
     #                            .where("end_date <= ?", params[:end_date])
     # if @replacements.empty?
     #   flash[:notice] = 'Pas de correspondance trouvée'
+
     # end
-
   end
-
-  def status_accepted
-    @replacement.mark('remplacement accepté')
-  end
-
-  def status_decline
-    @replacement.mark('remplacement refusé')
-  end
+#se connecter pour faire remplacement
+# afficher les remplacements
+# les valider ou les refuser
 
   def new
     @replacement = Replacement.new
@@ -32,20 +27,33 @@ class ReplacementsController < ApplicationController
     @patients = @user.patients
     @patients.each do |patient|
     replacement = Replacement.new(replacement_params)
-      replacement.patient = patient
-      replacement.owner = current_user
-      replacement.user = User.where.not(id: current_user.id).sample
-      replacement.save!
+    replacement.patient = patient
+    replacement.owner = current_user
+    replacement.user = User.where.not(id: current_user.id).sample
+    replacement.save!
     end
-  # 2. stocker dans une variable date de debut et de fin
-  # 3. for each care recuperer date puis trouver toutes les dates
-
     redirect_to replacements_path
   end
+
+  def status_accepted
+    # 1. Je récupère tous les replacements du current user pour le owner_id
+    @replacement = Replacement.where(user: current_user)
+    
+    # 2. Pour chaque replacement, j'update le statut
+    @replacement.each do |replacement|
+      replacement.update(status: 1)
+    end
+    redirect_to user_path(current_user)
+  end
+
+
+
+  # 2. stocker dans une variable date de debut et de fin
+  # 3. for each care recuperer date puis trouver toutes les dates
 
   private
 
   def replacement_params
-    params.require(:replacement).permit(:start_date, :end_date)
+    params.require(:replacement).permit(:start_date, :end_date, :status)
   end
 end

@@ -19,7 +19,7 @@ user1 = User.create!(
   email: "delphine@gmail.com",
   password: "delphine",
   first_name: "delphine",
-  last_name: "cph",
+  last_name: "Chang-pi-hin",
   adeli_number: "1234EFT",
   arrondissement: "13011",
   description: "Infirmière depuis 3 ans, je travaille dans le secteur du 11ème arrondissement de Marseille. Je fais ma tournée en voiture.",
@@ -30,7 +30,7 @@ user2 = User.create!(
   email: "mathieu@gmail.com",
   password: "mathieu",
   first_name: "mathieu",
-  last_name: "Rmn",
+  last_name: "Romano",
   adeli_number: "1290TFT",
   arrondissement: "13011",
   description: "Infirmier depuis 2 ans à l'hôpital, en parallèle je suis remplaçant en libéral.",
@@ -41,7 +41,7 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Roh",
+  last_name: "Ancian",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 3 ans en chirurgie ambulatoire, en parallèle je suis remplaçant en libéral.",
@@ -52,7 +52,7 @@ user4 = User.create!(
   email: "lucien@gmail.com",
   password: "lucien",
   first_name: "lucien",
-  last_name: "ph",
+  last_name: "Dupré",
   adeli_number: "1034HIT",
   arrondissement: "13011",
   description: "Infirmier libéral depuis 4 ans dans le 13011, je suis disponible pour faire des remplacements.",
@@ -67,18 +67,18 @@ patient1 = Patient.create!(
   adress: "9 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909875",
-  telephone_family: "0645454545"
+  telephone_family: "0783615473"
 )
 
 patient2 = Patient.create!(
   first_name: "Georgette",
-  last_name: "Salers",
+  last_name: "Soler",
   soin: "Injection s/c",
   age: "86",
-  adress: "56 bd de la valbarelle 13011",
+  adress: "56 bd de la tonnelle 13011",
   genre: "F",
-  telephone_number: "0678945875",
-  telephone_family: "0645456545"
+  telephone_number: "0775939178",
+  telephone_family: "0666166145"
 )
 
 patient3 = Patient.create!(
@@ -86,32 +86,32 @@ patient3 = Patient.create!(
   last_name: "Saras",
   soin: "Douche",
   age: "88",
-  adress: "23 rue de la font 13011",
+  adress: "23 rue de la sinécure 13011",
   genre: "F",
-  telephone_number: "0678909810",
-  telephone_family: "0645454510"
+  telephone_number: "0781648810",
+  telephone_family: "0761935936"
 )
 
-patient4 = Patient.create!(
+patient4 = Patient.create!
   first_name: "Hugo",
   last_name: "Compain",
   soin: "Pansement",
   age: "75",
-  adress: "12 rue de la fontaine 13011",
+  adress: "12 rue du corbeau 13011",
   genre: "M",
-  telephone_number: "0678909876",
-  telephone_family: "0645454546"
+  telephone_number: "0668349876",
+  telephone_family: "0726187316"
 )
 
 patient5 = Patient.create!(
   first_name: "Pierre",
-  last_name: "Mirabel",
+  last_name: "Miel",
   soin: "Douche",
   age: "81",
-  adress: "20 rue de la fontaine 13011",
+  adress: "22 rue de la fontaine 13011",
   genre: "M",
   telephone_number: "0678909877",
-  telephone_family: "0645454547"
+  telephone_family: "0754624583"
 )
 
 patient6 = Patient.create!(
@@ -119,65 +119,65 @@ patient6 = Patient.create!(
   last_name: "Dalleau",
   soin: "Dialyse",
   age: "75",
-  adress: "100 avenue Lauraine 13011",
+  adress: "92 avenue Lauraine 13011",
   genre: "M",
-  telephone_number: "0678909878",
-  telephone_family: "0645454548"
+  telephone_number: "0629109878",
+  telephone_family: "0641947652"
 )
 
 patient7 = Patient.create!(
   first_name: "Jules",
-  last_name: "Lula",
+  last_name: "Feta",
   soin: "Douche",
   age: "67",
-  adress: "30 rue sainte 13011",
+  adress: "30 rue sainte-croix 13011",
   genre: "M",
   telephone_number: "0678909879",
-  telephone_family: "0645454549"
+  telephone_family: "0736513486"
 )
 
 patient8 = Patient.create!(
-  first_name: "Tom",
-  last_name: "Posa",
+  first_name: "Thomas",
+  last_name: "Dugrin",
   soin: "Pansement",
   age: "76",
-  adress: "100 rue de toulouse 13011",
+  adress: "64 rue de toulouse 13011",
   genre: "M",
   telephone_number: "0678909815",
-  telephone_family: "0645454515"
+  telephone_family: "0691432657"
 )
 
 patient9 = Patient.create!(
   first_name: "Andrea",
-  last_name: "Clarosa",
+  last_name: "Claros",
   soin: "Douche",
   age: "87",
-  adress: "67 rue fameux 13011",
+  adress: "67 rue fimeux 13011",
   telephone_number: "0678909825",
   genre: "M",
-  telephone_family: "0645454525"
+  telephone_family: "0792514525"
 )
 
 patient10 = Patient.create!(
-  first_name: "Paul",
-  last_name: "Sossa",
+  first_name: "Adrien",
+  last_name: "Cozmic",
   soin: "Injection s/c",
   age: "63",
-  adress: "9 rue de la fontaine 13011",
+  adress: "5 rue de la sauvette 13011",
   genre: "M",
-  telephone_number: "0678909875",
-  telephone_family: "0645454545"
+  telephone_number: "0762857875",
+  telephone_family: "0645968217"
 )
 
 patient11 = Patient.create!(
   first_name: "Marie",
-  last_name: "Claire",
+  last_name: "Pugnasse",
   soin: "Pansement",
   age: "69",
-  adress: "111 rue de la Moula 13011",
+  adress: "111 rue bolat 13011",
   genre: "F",
   telephone_number: "0678909835",
-  telephone_family: "0645454535"
+  telephone_family: "0739562135"
 )
 
 patient12 = Patient.create!(
@@ -185,10 +185,10 @@ patient12 = Patient.create!(
   last_name: "Talosi",
   soin: "Surveillance de la glycémie",
   age: "75",
-  adress: "97 rue fifou 13011",
+  adress: "97 rue faley 13011",
   genre: "M",
   telephone_number: "0678909895",
-  telephone_family: "0645454595"
+  telephone_family: "0739461825"
 )
 
 patient13 = Patient.create!(
@@ -198,8 +198,8 @@ patient13 = Patient.create!(
   age: "85",
   adress: "99 rue jilo 13011",
   genre: "M",
-  telephone_number: "0678900975",
-  telephone_family: "0645450945"
+  telephone_number: "0769500975",
+  telephone_family: "0739164875"
 )
 
 patient14 = Patient.create!(
@@ -210,7 +210,7 @@ patient14 = Patient.create!(
   adress: "49 rue de la bidelaire 13011",
   genre: "M",
   telephone_number: "0678909175",
-  telephone_family: "0645454145"
+  telephone_family: "0619637815"
 )
 
 patient15 = Patient.create!(
@@ -218,11 +218,10 @@ patient15 = Patient.create!(
   last_name: "Sisco",
   soin: "Douche",
   age: "45",
-  adress: "109 rue mange 13011",
+  adress: "109 rue de la faim 13011",
   genre: "M",
-  telephone_number: "0778909875",
-  telephone_family: "0745454545"
-)
+  telephone_number: "0783167875",
+  telephone_family: "0794961895"
 
 
 replacement = Replacement.create!(

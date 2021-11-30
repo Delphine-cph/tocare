@@ -31,8 +31,8 @@ class ReplacementsController < ApplicationController
     replacement.owner = current_user
     replacement.user = User.where.not(id: current_user.id).sample
     replacement.save!
-    raise
     end
+    redirect_to replacements_path
   end
 
   def status_accepted

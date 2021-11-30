@@ -11,7 +11,7 @@
     </div>
     <div class="patient-remplacement text-center">
         <% replacements.each do |replacement| %>
-          <p class="border-patient"><%= replacement.patient.display_confidential_name %></p>
+          <p class="border-patient"><%= replacement.patient.display_name %></p>
         <% end  %>
         </div>
       </div>
@@ -38,6 +38,12 @@
                 </div>
                 <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
                 <p> <strong>Description:</strong> <%= user.description %></p>
+              <!-- TODO IF MESSAGE PRIVE -->
+                <% if Chatroom.find_chatroom(current_user, user) %>
+                  <%= link_to "Message", chatroom_path(Chatroom.find_chatroom(current_user, user)) %>
+                <% else %>
+                  <%= link_to "Message", chatrooms_path(id: user.id), method: :post %>
+                <% end %>
               </div>
               <!-- Modal footer -->
           </div>

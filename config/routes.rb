@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       post 'status_accepted'
     end
   end
-  resources :chatrooms, only: %i[index show] do
+  resources :chatrooms, only: %i[index show create] do
     resources :messages, only: :create
   end
 end

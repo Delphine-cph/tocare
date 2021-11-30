@@ -1,17 +1,13 @@
 <h1 class="text-center">Mes Patients</h1>
-<p class="text-center">_________________________________________</p>
-
-
-<div class= "action-buttons my-4">
-</div>
+<div class= "action-buttons my-4"></div>
 
 <% @patients.each do |patient| %>
 
   <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
       <div class="d-flex justify-content-between">
+        <p><%= patient.genre == "M" ? "🧓🏽" : "👩🏽‍🦳" %></p>
         <strong class="patient-name"><%= patient.display_name %></strong>
-        <p><%= patient.genre == "M" ? "👦🏽" : "👩🏼" %></p>
       </div>
         <p class="mb-0"><%= patient.age %> ans</p>
     <% end %>

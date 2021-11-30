@@ -76,15 +76,21 @@
 
 .patient-age {
   font-weight: lighter;
-  font-size: 13px
+  font-size: 16px;
 }
 
 .patient-gender {
   border-radius: 50%;
   background: #e9d8d4;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.mr-fake-link {
+  margin-right: 5px;
+  font-size: 20px;
 }

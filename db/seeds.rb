@@ -92,7 +92,7 @@ patient3 = Patient.create!(
   telephone_family: "0761935936"
 )
 
-patient4 = Patient.create!
+patient4 = Patient.create!(
   first_name: "Hugo",
   last_name: "Compain",
   soin: "Pansement",
@@ -222,6 +222,7 @@ patient15 = Patient.create!(
   genre: "M",
   telephone_number: "0783167875",
   telephone_family: "0794961895"
+)
 
 replacement1 = Replacement.create!(
   start_date: "12/11/2021",

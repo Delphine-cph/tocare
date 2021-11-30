@@ -28,14 +28,15 @@
   color: white;
   padding: 8px 100px;
   border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#698bea, #4a6ac5);
+  background-color: #5C68FF;
   transition: background 0.3s ease;
-  border: 1px solid #4a6ac5;
+  border: 1px solid #5C68FF;
   text-shadow: 0px 4px 7px rgba(0,0,0, 0.07);
   letter-spacing: 0.8px;
   display: block;
   margin : auto;
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 .btn-gradient:hover {

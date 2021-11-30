@@ -1,11 +1,13 @@
 <% if user_signed_in? %>
-  <h1 class ="mb-4">Bonjour <%= current_user.first_name.capitalize %> !</h1>
+  <h1 class ="mb-4">Bonjour <%= current_user.first_name.capitalize %> 👋</h1>
 
   <div>
     <h4>Notifications :</h4>
      <div>
-    <p class="home-card"><strong>Bravo</strong> 🎉 - Votre demande de remplacement a été acceptée</p>
-    </div>
+     <% @replacements.each do |user, replacements| %>
+        <p class="home-card"><strong>Bravo</strong> <strong><%= user.first_name.capitalize %></strong> a acceptée votre demande</p>
+     <% end %>
+      </div>
   </div>
 
   <div>

@@ -14,11 +14,10 @@
 }
 
 .cards-patient {
-  background-color:white;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.07) ;
+  background-color: #F2F3F4;
   width: 100%;
   border-radius: 10px;
-  padding: 10px;
+  padding: 25px;
   margin-bottom: 10px;
   a {
     text-decoration: none;
@@ -27,15 +26,13 @@
 }
 
 .patient-name {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-info-patient {
-  border: 2px solid #F77A57;
-  border-radius: 8px;
-  background-color: white;
-  padding: 10px;
-  margin-bottom: 10px;
+  background-color: #F2F3F4;
+  border-radius: 10px;
 }
 
 .alerte-allergie {
@@ -85,8 +82,8 @@
 .patient-gender {
   border-radius: 50%;
   background: #e9d8d4;
-  width: 28px;
-  height: 28px;
+  width: 60px;
+  height: 60px;
   justify-content: center;
   display: flex;
   align-items: center;

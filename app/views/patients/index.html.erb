@@ -5,11 +5,14 @@
 
   <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
-      <div class="d-flex justify-content-between">
-        <p class="emojis" ><%= patient.genre == "M" ? "🧓🏽" : "👩🏽‍🦳"%></p>
-        <strong class="patient-name"><%= patient.display_name %></strong>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="mb-0 patient-gender"><%= patient.genre == "M" ? "🧓🏽" : "👩🏽‍🦳" %></p>
+        <div class="card-patient-infos">
+          <p class="patient-name mb-0"><%= patient.display_name %></p>
+          <p class="mb-0 patient-age"><%= patient.age %> ans</p>
+        </div>
+        <div class="mb-0 fake-link">></div>
       </div>
-        <p class="mb-0"><%= patient.age %> ans</p>
     <% end %>
   </div>
 <% end %>

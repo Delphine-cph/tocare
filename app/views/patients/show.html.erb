@@ -47,11 +47,11 @@
 </div>
 
 <!-- Button trigger modal -->
-<div>
-  <%= link_to "Transmissions", patient_transmissions_path(@patient), class: "btn btn-primary" %>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<div class="two-button">
+  <%= link_to "Transmissions", patient_transmissions_path(@patient), class: "btn-transm" %>
+  <div type="button" class="btn-transm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   +
-  </button>
+  </div>
 </div>
 
 <!-- Modal -->

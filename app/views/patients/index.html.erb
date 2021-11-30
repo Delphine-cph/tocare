@@ -5,14 +5,14 @@
 <div class= "action-buttons my-4">
   <strong><%= link_to "Transmissions", "#", class: "card-actions" %></strong>
   <strong><%= link_to "+", new_patient_path, class: "card-actions" %></strong>
-</div>
 
 <% @patients.each do |patient| %>
+
   <div class="cards-patient">
     <%= link_to patient_path(patient) do %>
       <div class="d-flex justify-content-between">
-        <strong class="patient-name"><%= patient.display_confidential_name %></strong>
-        <p>Sexe: <%= patient.genre %></p>
+        <strong class="patient-name"><%= patient.display_name %></strong>
+        <p><%= patient.genre == "M" ? "👦🏽" : "👩🏼" %></p>
       </div>
         <p class="mb-0"><%= patient.age %> ans</p>
     <% end %>

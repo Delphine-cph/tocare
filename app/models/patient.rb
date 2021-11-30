@@ -9,7 +9,7 @@ class Patient < ApplicationRecord
   acts_as_taggable_on :treatments
   acts_as_taggable_on :soins
 
-  def display_confidential_name
-    "#{last_name.first(3).upcase}. #{first_name.first.upcase}."
+  def display_name
+    "#{last_name.upcase} #{first_name.capitalize}"
   end
 end

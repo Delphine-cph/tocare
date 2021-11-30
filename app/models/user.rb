@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :cares
   has_many :patients, through: :cares
   has_many :replacements
+  has_many :transmissions, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

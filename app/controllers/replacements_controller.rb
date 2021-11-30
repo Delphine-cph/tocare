@@ -45,10 +45,8 @@ class ReplacementsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def status_decline
-    @replacement.mark('Refuser')
-    redirect_to @user
-  end
+
+ 
   # 2. stocker dans une variable date de debut et de fin
   # 3. for each care recuperer date puis trouver toutes les dates
 

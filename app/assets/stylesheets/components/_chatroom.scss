@@ -30,25 +30,34 @@
 }
 
 .channel {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #FEF7F5;
   text-align: center;
-  padding: 16px 0;
+  padding: 15px 0px;
   align-items: center;
   border-radius: 10px;
-  & p {
-    margin: 0;
-  }
-  &:hover {
-    background-color: #F2F4F9;
-}
-
   a {
     text-decoration: none;
-    color: black;
+    color: #FF7244;
     font-size: 24px;
   }
 }
 
+.channel-private {
+  background-color: #F4F6F9;
+  text-align: center;
+  padding: 15px 0px;
+  align-items: center;
+  border-radius: 10px;
+  a {
+    text-decoration: none;
+    color: #6277C7;
+    font-size: 24px;
+  }
+}
+
+.space-photo {
+  margin-right: 15px;
+}
 
 .ownmessage {
   background-color: #FEEDE8;

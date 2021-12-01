@@ -35,13 +35,17 @@
   border-radius: 10px;
   font-size: 18px;
   padding: 20px;
+  p {
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
 }
 
 .cards-remplacent {
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: white;
+  background-color: #F2F3F4;
   padding: 20px;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
 }
 
 .avatar-card {
@@ -56,11 +60,10 @@
 }
 
 .border-patient {
-  border: 2px solid grey;
   border-radius: 10px;
   padding: 05px;
-  background-color: #E9F1FF;
   opacity: 0.7;
+
 }
 
 .underline {

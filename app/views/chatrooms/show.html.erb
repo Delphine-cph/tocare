@@ -1,6 +1,10 @@
 <div class="container chatroom">
+<%= link_to replacements_path, class:"arrow mt-0" do %>
+  <i class="fas fa-long-arrow-alt-left"></i>
+<% end %>
+
 <% if @chatroom.name %>
-  <h1>#<%= @chatroom.name.capitalize %></h1>
+  <h1><%= @chatroom.name.capitalize %></h1>
 <% elsif @chatroom.owner == current_user %>
   <h1><%= @chatroom.recipient.first_name %></h1>
 <% else %>

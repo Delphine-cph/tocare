@@ -1,8 +1,4 @@
 <div class="marge-page">
-  <%= link_to patients_path, class:"arrow mt-0" do %>
-    <i class="fas fa-long-arrow-alt-left"></i>
-  <% end %>
-
   <h2><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h2>
   <p><%= @patient.birthday %></p>
 
@@ -80,7 +76,7 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for [@patient, @transmission] do |f| %>
-        <%= f.input :content, label: "Transmission du jour" %>
+        <%= f.input :content, label: false, placeholder: "Transmission du jour" %>
         <%= f.submit %>
         <% end %>
       </div>

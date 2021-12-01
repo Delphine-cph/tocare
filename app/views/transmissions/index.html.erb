@@ -1,12 +1,9 @@
+<div class="marge-page">
 <div class="title-addbutton">
-  <div>
-  <h1>Transmissions</h1>
-  </div>
-  <%= link_to "Retour", patients_path %>
-<%= simple_form_for [@patient, @transmission] do |f| %>
-  <%= f.input :content,label:false %>
-  <%= f.submit %>
-<% end %>
+      <%= link_to patient_path(@patient), class:"arrow mt-0" do %>
+    <i class="fas fa-long-arrow-alt-left"></i>
+  <% end %>
+  <h1 class="mb-3">Transmissions</h1>
 </div>
 <% count = 1 %>
 <% @transmissions.each do |date, transmissions| %>
@@ -19,7 +16,7 @@
     <div id="collapse<%= count %>" class="accordion-collapse collapse <%= 'show' if count == 1 %>" aria-labelledby="heading<%= count %>" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <% transmissions.each do |transmission| %>
-          <p><i><%= l transmission.created_at, format: :short %></i> - <%= transmission.content %></p>
+          <p><i><%= l transmission.created_at, format: :short %></i> (<%= transmission.user.first_name %>) - <%= transmission.content %></p>
         <% end %>
       </div>
     </div>
@@ -27,6 +24,29 @@
   <% count += 1 %>
 <% end %>
 
+    <div type="button" class="btn-transmission" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Ajoute une transmission
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Ajoute une transmission</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@patient, @transmission] do |f| %>
+        <%= f.input :content, label: false, placeholder: "Transmission du jour" %>
+        <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
 <%# <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">

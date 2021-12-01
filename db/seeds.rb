@@ -284,6 +284,12 @@ patient16 = Patient.create!(
   telephone_family: "Fils: 0695961895"
 )
 
+transmission1 = Transmission.create!(
+  user: user1,
+  patient: patient16,
+  content: 29/11/21,
+)
+
 replacement = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
@@ -412,7 +418,7 @@ Chatroom.create!(
 )
 
 Chatroom.create!(
-  name: "IDEL 75011"
+  name: "IDEL 13011"
 )
 
 Chatroom.create!(

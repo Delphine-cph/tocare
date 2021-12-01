@@ -38,7 +38,7 @@ class ReplacementsController < ApplicationController
   def status_accepted
     # 1. Je récupère tous les replacements du current user pour le owner_id
     @replacement = Replacement.where(user: current_user)
-    
+
     # 2. Pour chaque replacement, j'update le statut
     @replacement.each do |replacement|
       replacement.update(status: 1)

@@ -2,18 +2,22 @@
   <h1>Channels</h1>
 </div>
 
+<h3 class="mb-4"> 💬 <strong>Fils de discussion</strong></h3>
 <% @public_chatrooms.each do |chatroom| %>
-  <div class="channel channel-border mb-3">
+  <div class="channel mb-3">
     <p><%= link_to chatroom.name, chatroom_path(chatroom) %></p>
   </div>
 <% end %>
 
-<h3>Conversations privées</h3>
+<h3 class="mb-4 mt-5"> 💬 <strong>Conversations privées</strong></h3>
 
 <% @private_chatrooms.each do |chatroom| %>
-  <div class="channel channel-border mb-3">
+  <div class="channel-private mb-3">
     <% if chatroom.owner == current_user %>
-      <p><%= image_tag chatroom.recipient.photo, class: "avatar" %> <%= link_to chatroom.recipient.first_name.capitalize, chatroom_path(chatroom) %></p>
+      <div class="d-flex justify-content-center">
+        <div class="space-photo"><%= image_tag chatroom.recipient.photo, class: "avatar" %></div>
+        <%= link_to chatroom.recipient.first_name.capitalize, chatroom_path(chatroom) %>
+      </div>
     <% else %>
       <p><%= image_tag chatroom.owner.photo, class: "avatar" %> <%= link_to chatroom.owner.first_name.capitalize, chatroom_path(chatroom) %></p>
     <% end %>

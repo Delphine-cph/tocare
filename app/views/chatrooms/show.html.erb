@@ -21,7 +21,12 @@
     <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-  <% end %>
+  <div class="position-fixed">
+    <%= simple_form_for [@chatroom, @message], remote: true, :html => { class:"d-flex" } do |f| %>
+    <%= f.input :content, label: false, :wrapper_html => { style: "width: 100%;"}, placeholder: "Message ##{@chatroom.name}" %>
+    <%= button_tag type: 'submit', class: "btn btn-primary", style: "height:100%; background-color:#5E70DC;" do %>
+    <i class="fas fa-paper-plane"></i>
+    <% end %>
+    <% end %>
+  </div>
 </div>

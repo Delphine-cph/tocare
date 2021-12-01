@@ -57,3 +57,41 @@
   margin-top: -20px;
   font-size: 16px;
 }
+
+.btn-ajout {
+  text-decoration: none;
+  background-color: #5E70DC;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  position: fixed;
+  bottom: 75px;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 20px;
+  width: 85vw;
+  margin-left: 11px;
+}
+
+.btn-transm {
+  text-decoration: none;
+  background-color: #5E70DC;
+  color: white;
+  padding: 15px 45px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.two-button {
+  position: fixed;
+  bottom: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.marge-page {
+  margin-bottom: 70px;
+}

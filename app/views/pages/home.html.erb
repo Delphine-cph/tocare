@@ -2,10 +2,13 @@
   <h1 class ="mb-5">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
 
 
-
+    <% if @replacements.empty? %>
+    <p class="home-card text-center"><strong>You have now 0 replacement </strong> <i class="far fa-grin"></i></p>
+      <% else %>
      <div>
         <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> infirmier a validé ta demande !🚀</p>
     </div>
+      <% end %>
 
     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,21 +34,33 @@
 
 
 <div class="home-card card-trans">
+<div class="rond-circle">
+<div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
   📝
+</div>
+</div>
   <div>
     <strong>Transmissions</strong><br># 1 en attente</div>
     <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 
 <div class="home-card card-msg">
+<div class="rond-circle">
+  <div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
     📩
+  </div>
+</div>
     <div>
       <strong>Messages</strong><br># 1 en attente</div>
       <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 
 <div class="home-card card-actu">
+  <div class="rond-circle">
+  <div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
     📰
+  </div>
+  </div>
     <div>
       <strong>Actualités</strong><br>Tu es à jour!</div>
       <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>

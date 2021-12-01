@@ -398,11 +398,11 @@ Chatroom.create!(
 )
 
 Chatroom.create!(
-  name: "IDEL 75011"
+  name: "IDEL 13011"
 )
 
 Chatroom.create!(
-  name: "Entraide"
+  name: "Annexes"
 )
 
 puts "done!"

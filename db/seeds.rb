@@ -273,7 +273,7 @@ patient16 = Patient.create!(
   first_name: "Huguette",
   last_name: "Perez",
   soin: "Pansement genou droit, Aide à la toilette, Chaussettes de contention, Surveillance de la tension artérielle",
-  atcd: "PTG droit le 26/11/21, Hypertension artérielle, Insuffisance veineuse, Arthrose",
+  atcd: "PTG droite le 26/11/21, Hypertension artérielle, Insuffisance veineuse, Arthrose",
   treatment: "Amlor 30 (1-0-1), Paracétamol 1g si besoin toutes les 4 à 6h (si EVA > 3), Acupan si besoin 3x /jour (si EVA > 6)",
   age: "87",
   birthday: "07/01/1934",
@@ -287,7 +287,13 @@ patient16 = Patient.create!(
 transmission1 = Transmission.create!(
   user: user1,
   patient: patient16,
-  content: 29/11/21,
+  content: "29 nov. 11h41 (Victoria) - Nouvelle patiente, RAD ce jour. Patiente à J3 d'une PTG droite. Pansement propre et occlusif, à refaire demain. TA stable : 123/87, pouls : 86. EVA : 3, doliprane donné à 10h00, EVA à 0( 30 min après).Bonne mobilisation, kiné à domicile tous les jours."
+)
+
+transmission2 = Transmission.create!(
+  user: user1,
+  patient: patient16,
+  content: "30 nov. 12h41 (Victoria) - J4 (PTG droite). Réfection pst genou droit ce jour, plaie propre, fermée par des agrafes à enlever à J15. EVA à 0 ce jour. TA : 133/87, pouls : 89.  "
 )
 
 replacement = Replacement.create!(

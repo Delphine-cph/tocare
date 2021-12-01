@@ -431,4 +431,11 @@ Chatroom.create!(
   name: "Entraide"
 )
 
+[user2, user3, user4].each do |user|
+  chatroom = Chatroom.new
+  chatroom.owner = user1
+  chatroom.recipient = user
+  chatroom.save
+end
+
 puts "done!"

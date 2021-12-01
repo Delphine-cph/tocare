@@ -402,7 +402,7 @@ Chatroom.create!(
 )
 
 Chatroom.create!(
-  name: "Annexes"
+  name: "Entraide"
 )
 
 puts "done!"

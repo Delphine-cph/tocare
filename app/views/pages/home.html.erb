@@ -18,9 +18,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <% @replacements.each do |user, replacements| %>
+      <% if @replacements.nil? %>
+        <p><strong>You have 0 replacement</strong></p>
+      <%else %>
+      <% @replacements.each do |user, replacements| %>
           <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo</strong> <strong><%= user.first_name.capitalize %></strong> a acceptée votre demande </p>
         <% end %>
+      <%end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>

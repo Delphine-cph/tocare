@@ -274,7 +274,7 @@ patient16 = Patient.create!(
   last_name: "Perez",
   soin: "Pansement genou droit, Aide à la toilette, Chaussettes de contention, Surveillance de la tension artérielle",
   atcd: "PTG droit le 26/11/21, Hypertension artérielle, Insuffisance veineuse, Arthrose",
-  treatment: "Amlor 30 (1-0-1), Paracétamol 1g si besoin toutes les 4 à 6h (si EVA > 3), acupan si besoin 3x /jour (si EVA > 6)",
+  treatment: "Amlor 30 (1-0-1), Paracétamol 1g si besoin toutes les 4 à 6h (si EVA > 3), Acupan si besoin 3x /jour (si EVA > 6)",
   age: "87",
   birthday: "07/01/1934",
   allergy: "Iode",

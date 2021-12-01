@@ -1,21 +1,24 @@
-<div class="d-flex justify-content-between align-items-center">
+<div class="marge-page">
   <h3>Mes Patients</h3>
-  <%= link_to "Ajouter +", "#", class: "btn-ajout" %>
-</div>
 
-<div class= "action-buttons my-2"></div>
-<% @patients.each do |patient| %>
+  <div class= "action-buttons my-2"></div>
+  <% @patients.each do |patient| %>
 
-  <div class="cards-patient">
-    <%= link_to patient_path(patient) do %>
-      <div class="d-flex justify-content-between align-items-center">
-        <p class="mb-0 patient-gender"><%= patient.genre == "M" ? "👨" : "👩🏽" %></p>
-        <div class="card-patient-infos">
-          <p class="patient-name mb-0"><%= patient.display_name %></p>
-          <p class="mb-0 patient-age"><%= patient.age %> ans</p>
+    <div class="cards-patient">
+      <%= link_to patient_path(patient) do %>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="mb-0 patient-gender"><%= patient.genre == "M" ? "👨" : "👩🏽" %></p>
+          <div class="card-patient-infos">
+            <p class="patient-name mb-0"><%= patient.display_name %></p>
+            <p class="mb-0 patient-age"><%= patient.age %> ans</p>
+          </div>
+          <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
         </div>
-        <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="row text-center">
+    <%= link_to "Ajouter +", "#", class: "btn-ajout col-12" %>
   </div>
-<% end %>
+</div>

@@ -143,19 +143,6 @@ patient6 = Patient.create!(
   telephone_family: "Fille: 0641947652"
 )
 
-patient7 = Patient.create!(
-  first_name: "Jules",
-  last_name: "Fertado",
-  soin: "Pansement complexe dos avec ablation d'agrafes",
-  atcd: "Opération du canal lombaire étroit le 10/11/21, asthme",
-  age: "67",
-  birthday: "10/07/1954",
-  adress: "18 traverse de la resclave 13011",
-  genre: "M",
-  telephone_number: "0678909879",
-  telephone_family: "Fils: 0736513486"
-)
-
 patient8 = Patient.create!(
   first_name: "Thomas",
   last_name: "Dugrin",
@@ -268,6 +255,21 @@ patient15 = Patient.create!(
   telephone_family: "Femme: 0794961895"
 )
 
+patient16 = Patient.create!(
+  first_name: "Huguette",
+  last_name: "Perez",
+  soin: "Pansement genou droit, aide à la toilette, surveillance de la tension artérielle",
+  atcd: "PTG droit le 26/11/21, Hypertension artérielle, insuffisance veineuse, ",
+  treatment: "amlor 30 (1-0-1), doliprane si besoin, acupan si besoin, topalgic si besoin",
+  age: "87",
+  birthday: "07/01/1934",
+  allergy: "Iode",
+  adress: "56 Bd de la Valbarelle 13011",
+  genre: "F",
+  telephone_number: "0783147875",
+  telephone_family: "Fils: 0695961895"
+)
+
 replacement = Replacement.create!(
   start_date: "12/11/2021",
   end_date: "12/12/2021",
@@ -330,12 +332,6 @@ care = Care.create!(
 )
 
 care = Care.create!(
-  patient: patient7,
-  user: user1,
-  day: "Lundi"
-)
-
-care = Care.create!(
   patient: patient8,
   user: user1,
   day: "Lundi"
@@ -379,6 +375,12 @@ care = Care.create!(
 
 care = Care.create!(
   patient: patient15,
+  user: user1,
+  day: "Lundi"
+)
+
+care = Care.create!(
+  patient: patient16,
   user: user1,
   day: "Lundi"
 )

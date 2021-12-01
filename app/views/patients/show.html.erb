@@ -1,50 +1,58 @@
 <div class="marge-page">
-  <%= link_to patients_path, class:"arrow mt-0" do %>
-    <i class="fas fa-long-arrow-alt-left"></i>
-  <% end %>
-
   <h2><strong><%= @patient.first_name.capitalize %>  <%= @patient.last_name.upcase %></strong></h2>
   <p><%= @patient.birthday %></p>
 
 
   <div class="card-info-patient p-3">
-    <p><i class="fas fa-map-marker-alt"></i> <%= @patient.adress %></p>
-    <p><i class="fas fa-mobile-alt"></i> <%= @patient.telephone_number %></p>
-    <p><i class="far fa-address-book"></i> <%= @patient.telephone_family %></p>
+    <div><i class="fas fa-map-marker-alt"></i> <%= @patient.adress %></div>
+    <div><i class="fas fa-mobile-alt"></i> <%= @patient.telephone_number %></div>
+    <div><i class="far fa-address-book"></i> <%= @patient.telephone_family %></div>
   </div>
 
   <h5 class="mt-3"><strong>Infirmières référentes</strong></h5>
   <div class="card-info-patient mb-3">
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
       <%= image_tag "https://ca.slack-edge.com/T02NE0241-U02H14N14QY-dd18447e4b8b-512", class:"avatar" %>
-      <p><strong>Delphine Chang-pi-hin</strong></p>
+      <p>Delphine Chang-pi-hin</p>
       </div>
   </div>
   <div class="card-info-patient mb-3">
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
       <%= image_tag "https://scontent.fcdg3-1.fna.fbcdn.net/v/t1.18169-9/31144086_1629633837113225_5971500848746001918_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=RWNn3ZmW4sQAX-DXvl7&_nc_ht=scontent.fcdg3-1.fna&oh=a18641a80ccc72b55e6ab8da888dde69&oe=61CE199F", class:"avatar" %>
-      <p><strong>Victoria Schintu</strong></p>
+      <p>Victoria Schintu</p>
       </div>
   </div>
 
   <h5 class="mt-3"><strong>Antécédents</strong></h5>
   <div class="card-info-patient">
-    <strong></strong> <%= @patient.atcd %>
+    <ul>
+      <% @patient.atcd.split(',').each do |antecedent| %>
+        <li><%= antecedent.strip %></li>
+      <% end %>
+    </ul>
   </div>
 
   <h5 class="mt-3"><strong>Allergies</strong></h5>
   <div class="card-info-patient">
-  <%= @patient.allergy %>
+  <strong><%= @patient.allergy.upcase %></strong>
   </div>
 
   <h5 class="mt-3"><strong>Traitements</strong></h5>
   <div class="card-info-patient">
-    <%= @patient.treatment %>
+    <ul>
+      <% @patient.treatment.split(',').each do |ttt| %>
+        <li><%= ttt.strip %></li>
+      <% end %>
+    </ul>
   </div>
 
   <h5 class="mt-3"><strong>Soins</strong></h5>
   <div class="card-info-patient">
-    <%= @patient.soin %>
+    <ul>
+      <% @patient.soin.split(',').each do |acte| %>
+        <li><%= acte.strip.capitalize %></li>
+      <% end %>
+    </ul>
 </div>
 
   <!-- Button trigger modal -->
@@ -63,12 +71,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Ajoute une transmission</h5>
+        <h5 class="modal-title" id="staticBackdropLabel"> 📝 Ajoute une transmission</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <%= simple_form_for [@patient, @transmission] do |f| %>
-        <%= f.input :content, label: "Transmission du jour" %>
+        <%= f.input :content, label: false, placeholder: "Transmission du jour" %>
         <%= f.submit %>
         <% end %>
       </div>

@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
-  <h1 class ="mb-5">Bonjour <%= current_user.first_name.capitalize %> 👋</h1>
+  <h1 class ="mb-5">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
 
 
 
      <div>
-        <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> fratés de ta région sont chauds pour te remplacer 🎉</p>
+        <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> infirmier a validé ta demande !🚀</p>
     </div>
 
     <!-- Modal -->
@@ -29,18 +29,26 @@
   </div>
 </div>
 
-  <div>
-      <div>
-    <div class="home-card card-trans"><strong>Transmissions</strong> 📝 - IDE / Patient : transmissions</div>
-    </div>
-  </div>
 
+<div class="home-card card-trans">
+  📝
   <div>
-    <p class="home-card card-actu"><strong>Actualités</strong> 📰 - #Channel</p>
-  </div>
+    <strong>Transmissions</strong><br># 1 en attente</div>
+    <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
+</div>
 
-  <div>
-    <p class="home-card card-msg"><strong>Message</strong> 📩 - IDE vous a envoyé un message</p>
+<div class="home-card card-msg">
+    📩
+    <div>
+      <strong>Messages</strong><br># 1 en attente</div>
+      <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
+</div>
+
+<div class="home-card card-actu">
+    📰
+    <div>
+      <strong>Actualités</strong><br>Tu es à jour!</div>
+      <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
   </div>
 
   <% else %>

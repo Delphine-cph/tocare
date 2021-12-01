@@ -30,11 +30,14 @@
 }
 
 .channel {
-  background-color: white;
-  padding-left: 20px;
-  padding-top: 10px;
-  border-radius: 6px;
-
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 16px 0;
+  align-items: center;
+  border-radius: 10px;
+  & p {
+    margin: 0;
+  }
   &:hover {
     background-color: #F2F4F9;
 }
@@ -42,17 +45,10 @@
   a {
     text-decoration: none;
     color: black;
-    opacity: 0.8;
     font-size: 24px;
   }
 }
 
-.channel-border {
-  border: 2px solid #21DBD0;
-  &:hover {
-    border: 2px solid #0C52FF;
-  }
-}
 
 .ownmessage {
   background-color: #FEEDE8;

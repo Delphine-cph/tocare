@@ -33,22 +33,23 @@
               </div>
               <!-- Modal body -->
               <div class="modal-body">
-                <%= image_tag user.photo, class: "avatar", style: "width: 100px; border:" %>
-                  <div class="card-user mt-3">
-                    <ul class="ml-0"> <strong>Notation :</strong>
-                      <% 5.times do %>
-                        <li class="list-in-line"><i class="fas fa-star"></i></li>
-                      <% end %>
-                    </ul>
-                  </div>
-                  <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
-                  <p> <strong>Description:</strong> <%= user.description %></p>
-                <!-- TODO IF MESSAGE PRIVE -->
-                  <% if Chatroom.find_chatroom(current_user, user) %>
-                    <%= link_to "Message", chatroom_path(Chatroom.find_chatroom(current_user, user)) %>
-                  <% else %>
-                    <%= link_to "Message", chatrooms_path(id: user.id), method: :post %>
-                  <% end %>
+
+              <%= image_tag user.photo, class: "avatar", style: "width: 100px; border:" %>
+                <div class="card-user mt-3">
+                  <ul class="ml-0"> <strong>Notation :</strong>
+                    <% 5.times do %>
+                      <li class="list-in-line"><i class="fas fa-star"></i></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <p> <strong>Localisation:</strong> <%= user.arrondissement %></p>
+                <p> <strong>Description:</strong> <%= user.description %></p>
+              <!-- TODO IF MESSAGE PRIVE -->
+                <% if Chatroom.find_chatroom(current_user, user) %>
+                  <%= link_to "Message", chatroom_path(Chatroom.find_chatroom(current_user, user)), class: "btn btn-transm" %>
+                <% else %>
+                  <%= link_to "Message", chatrooms_path(id: user.id), method: :post, class: "btn btn-transm" %>
+                <% end %>
               </div>
               <!-- Modal footer -->
           </div>
@@ -68,17 +69,9 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+        <i class="far fa-check-circle large-green"></i>
         <h5 class="modal-title" id="exampleModalLabel">Ta demande a bien été prise en compte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class= "p-text">Tu recevras une notification de validation de tes remplaçants </p>
-      </div>
-      <div class="modal-footer">
-        <%= link_to "Faire une autre demande", new_replacement_path, class: "btn btn-primary btn-center my-3" %></div>
         <%= link_to "Retour à l'accueil", root_path, class: "btn btn-primary btn-center my-3" %>
-      </div>
     </div>
   </div>
 </div>

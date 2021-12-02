@@ -55,31 +55,4 @@
     </ul>
 </div>
 
-  <!-- Button trigger modal -->
-  <div class="two-button">
-    <%= link_to "Transmissions", patient_transmissions_path(@patient), class: "btn-transm" %>
-    <div type="button" class="btn-transm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    +
-    </div>
-  </div>
-
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel"> 📝 Ajoute une transmission</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for [@patient, @transmission] do |f| %>
-        <%= f.input :content, label: false, placeholder: "Transmission du jour" %>
-        <%= f.submit %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= link_to "Voir les transmissions", patient_transmissions_path(@patient), class: "btn-transmission" %>

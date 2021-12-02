@@ -44,7 +44,7 @@
 .cards-remplacent {
   border-radius: 10px;
   background-color: #F2F3F4;
-  padding: 20px;
+  padding: 26px;
   box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -63,11 +63,6 @@
   border-radius: 10px;
   padding: 05px;
   opacity: 0.7;
-
-}
-
-.underline {
-  text-decoration: underline;
 }
 
 .card-patient-infos {
@@ -112,4 +107,18 @@
 
 .left-margin {
     margin-left: 10px;
+}
+
+.text-center {
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.remplaçants-patients {
+  text-align: center;
+}
+
+.drope {
+display: block;
+margin: auto;
 }

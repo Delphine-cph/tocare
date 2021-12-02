@@ -45,7 +45,6 @@
   border-radius: 10px;
   background-color: #F2F3F4;
   padding: 26px;
-  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.08);
 }
 
 .avatar-card {
@@ -55,8 +54,7 @@
 
 .patient-remplacement {
   font-size: 16px;
-  margin-top: 15px;
-  padding: 10px;
+  margin-top: -15px;
 }
 
 .border-patient {
@@ -120,5 +118,18 @@
 
 .drope {
 display: block;
-margin: auto;
+margin: 0px 50px;
+text-decoration: none;
+text-align: center;
+background-color: #FCEEE9;
+color: #FF7244;
+padding: 10px 0px;
+}
+
+
+.clean-list {
+  margin-bottom: 50px;
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
 }

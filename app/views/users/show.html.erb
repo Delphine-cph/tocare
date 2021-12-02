@@ -7,16 +7,8 @@
   </div>
 </div>
 
-<div class="card-user">
-  <ul class="mt-4"> <strong>Notation :</strong>
-    <% 5.times do %>
-      <li class="list-in-line"><i class="fas fa-star"></i></li>
-    <% end %>
-  </ul>
-</div>
-
 <div class="container">
-  <div class="card-secteur">
+  <div class="card-secteur mt-2">
     <div><strong>Secteur :</strong> <%= @user.arrondissement %></div>
     <div><strong>Equipe :</strong> Marie A.</div>
   </div>
@@ -24,12 +16,12 @@
 
   <p class="left-margin"> <strong>Soins :</strong></p>
   <div class="profile-card-tags">
-    <div class="tag-soins">Pansements</div>
+    <div class="tag-soins">Pansement</div>
     <div class="tag-soins">Toilette</div>
-    <div class="tag-soins">Perfusions</div>
+    <div class="tag-soins">Perfusion</div>
   </div>
 
-  <div class="profile-card-tags mt-3">
+  <div class="profile-card-tags mt-2 mb-2">
     <div class="tag-soins">Dialyse péritonéale</div>
     <div class="tag-soins">Glycémie</div>
     <div class="tag-soins">TTT</div>
@@ -40,4 +32,4 @@
   <%= link_to 'valider', status_accepted_replacements_path(owner_id: key.id), method: :post %>
 <% end %>
 
-<strong><%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item mt-3" %></strong>
+<div class="deco"><strong><%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item mt-3" %></strong></div>

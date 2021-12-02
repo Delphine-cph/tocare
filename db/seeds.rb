@@ -41,11 +41,11 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Le Kennec",
+  last_name: "Le kennec",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
 )
 
 user4 = User.create!(
@@ -56,7 +56,7 @@ user4 = User.create!(
   adeli_number: "1034HIT",
   arrondissement: "13011",
   description: "Infirmier libéral depuis 4 ans dans le 13011, je suis disponible pour faire des remplacements.",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
+  photo: "lucien.png"
 )
 
 patient1 = Patient.create!(

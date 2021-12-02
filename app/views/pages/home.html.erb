@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <h1 class ="mb-5">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
+  <h1 class ="mb-4">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
 
 
     <% if @replacements.empty? %>
@@ -9,7 +9,7 @@
             🔎
           </div>
         </div>
-        <div class="text-center"><strong>Remplacements</strong><br> 0 demandes <br> en attente</div>
+        <div class="text-center"><strong>Remplacements</strong><br> 0 demandes</div>
         <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
       </div>
     <% else %>
@@ -52,7 +52,7 @@
 </div>
 </div>
   <div class="text-center">
-    <strong>Transmissions</strong><br>15 nouvelles <br> transmissions</div>
+    <strong>Transmissions</strong><br> <strong> 15</strong> transmissions</div>
     <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 
@@ -63,7 +63,7 @@
   </div>
 </div>
     <div>
-      <strong>Messages</strong><br>1 message</div>
+      <strong>Messages</strong><br> <strong> 1</strong> message</div>
       <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 

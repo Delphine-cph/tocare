@@ -41,7 +41,7 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Le kennec",
+  last_name: "Le Kennec",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",
@@ -287,13 +287,13 @@ patient16 = Patient.create!(
 transmission1 = Transmission.create!(
   user: user1,
   patient: patient16,
-  content: "29 nov. 11h41 (Victoria) - Nouvelle patiente, RAD ce jour. Patiente à J3 d'une PTG droite. Pansement propre et occlusif, à refaire demain. TA stable : 123/87, pouls : 86. EVA : 3, doliprane donné à 10h00, EVA à 0( 30 min après).Bonne mobilisation, kiné à domicile tous les jours."
+  content: "<strong><i>29 nov. 11h41 (Victoria) - </i></strong> Nouvelle patiente, RAD ce jour. Patiente à J3 d'une PTG droite. Pansement propre et occlusif, à refaire demain. TA stable : 123/87, pouls : 86. EVA : 3, doliprane donné à 10h00, EVA à 0( 30 min après). Bonne mobilisation, kiné à domicile tous les jours."
 )
 
 transmission2 = Transmission.create!(
   user: user1,
   patient: patient16,
-  content: "30 nov. 12h41 (Victoria) - J4 (PTG droite). Réfection pst genou droit ce jour, plaie propre, fermée par des agrafes à enlever à J15. EVA à 0 ce jour. TA : 133/87, pouls : 89.  "
+  content: "<strong><i>30 nov. 12h41 (Victoria) -</i></strong> J4 (PTG droite). Réfection pst genou droit ce jour, plaie propre, fermée par des agrafes à enlever à J15. EVA à 0 ce jour. TA : 133/87, pouls : 89.  "
 )
 
 replacement = Replacement.create!(

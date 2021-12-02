@@ -18,7 +18,7 @@
       <div class="accordion-body">
         <% transmissions.each do |transmission| %>
         <!-- <i><%= l transmission.created_at, format: :short %> </i> (<%= transmission.user.first_name %>) - -->
-          <p><%= transmission.content %></p>
+          <p><%== transmission.content %></p>
         <% end %>
       </div>
     </div>

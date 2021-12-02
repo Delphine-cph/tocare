@@ -35,6 +35,7 @@
       <div class="modal-body">
         <% @replacements.each do |user, replacements| %>
           <p style="font-size:20px;" data-bs-toggle="modal" data-bs-target="#exampleModal"> 🚀 <strong>Bravo</strong> <strong><%= user.first_name.capitalize %></strong> a accepté votre demande </p>
+          <p><%= link_to "Envoyer un message", chatrooms_path(id: user.id), method: :post, class: "btn-message" %></p>
         <% end %>
       </div>
       <div class="modal-footer">

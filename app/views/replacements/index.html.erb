@@ -1,24 +1,28 @@
 <div class="marge-page">
-<h4 class= "text-center"><strong><%= @replacements.count %> remplaçants sont disponibles </strong> </h4>
-
+<h4 class= "text-center"> Ces <strong><%= @replacements.count %></strong> infirmiers vont te remplacer  </h4>
 
 <div class="mt-3">
   <% @replacements.each do |user, replacements| %>
     <div class="" data-bs-toggle="modal" data-bs-target="#myModal<%= user.id %>">
       <div class="cards-remplacent mb-3">
-        <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-around align-items-center">
           <%= image_tag user.photo, class: "avatar" %>
-          <h2 class=> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %> </h2>
+          <h2 style="font-size:20px; margin:0"> <%= user.first_name.capitalize %> <%= user.last_name.capitalize %> </h2>
+          <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
         </div>
       </div>
     </div>
-  <button type="button" class="drope btn btn-info mb-5" data-bs-toggle="collapse" data-bs-target=<%= "#demo#{user.id}" %>>Patients pris en charge</button>
-  <div id=<%= "demo#{user.id}" %> class="collapse">
+  <div class="drope mb-5" data-bs-toggle="collapse" data-bs-target=<%= "#demo#{user.id}" %>>Patients pris en charge
+      <i class="fas fa-caret-down"></i>
+  </div>
+  <div id=<%= "demo#{user.id}" %> class="collapse list-patient">
     <div class="patient-remplacement">
-        <ul>
+        <ul class="clean-list">
+    <div class="patient-bottom mb-4">
       <% replacements.each do |replacement| %>
           <li><div class="border-patient"> <%= replacement.patient.display_name %></div></li>
       <% end %>
+    </div>
         </ul>
     </div>
   </div>
@@ -61,9 +65,9 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn-transmission" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<div type="button" class="btn-transmission" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Je valide
-</button>
+</div>
 
 <!-- Modal button valider -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

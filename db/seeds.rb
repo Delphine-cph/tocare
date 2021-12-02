@@ -45,7 +45,7 @@ user3 = User.create!(
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",
-  photo: "https://ca.slack-edge.com/T02NE0241-U02GEPNEZD3-d535aa0a5e5b-512"
+  photo: "https://ca.slack-edge.com/T02NE0241-U02GD82T65B-f5ff7bcc27a8-512"
 )
 
 user4 = User.create!(
@@ -430,5 +430,12 @@ Chatroom.create!(
 Chatroom.create!(
   name: "Entraide"
 )
+
+[user2, user3, user4].each do |user|
+  chatroom = Chatroom.new
+  chatroom.owner = user1
+  chatroom.recipient = user
+  chatroom.save
+end
 
 puts "done!"

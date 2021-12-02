@@ -26,11 +26,12 @@
   <% count += 1 %>
 <% end %>
 
-    <div type="button" class="btn-transmission" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Ajoute une transmission
-    </div>
+    <%# <%= link_to "Ajoute une transmission", patient_transmissions_path(@patient), class: "btn-transmission" %>
+<div class="btn-transmission" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+Ajoute une transmission
+</div>
 
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

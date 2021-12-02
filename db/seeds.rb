@@ -41,7 +41,7 @@ user3 = User.create!(
   email: "arthur@gmail.com",
   password: "arthur",
   first_name: "arthur",
-  last_name: "Le kennec",
+  last_name: "Le Kennec",
   adeli_number: "9934EFT",
   arrondissement: "13011",
   description: "Infirmier depuis 6 ans dont 3 en chirurgie ambulatoire, je suis remplaçant en libéral dès que je suis disponible",

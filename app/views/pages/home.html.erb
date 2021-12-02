@@ -1,32 +1,44 @@
 <% if user_signed_in? %>
-  <h1 class ="mb-5">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
+  <h1 class ="mb-4">Bonjour <%= current_user.first_name.capitalize %> ! 👋</h1>
 
 
     <% if @replacements.empty? %>
-    <p class="home-card text-center">Tu n'as pas de demande de remplacement en attente <i class="far fa-grin"></i></p>
-      <% else %>
+      <div class="home-card card-no-dem">
+        <div class="rond-circle">
+          <div class="home-emoticon">
+            🔎
+          </div>
+        </div>
+        <div class="text-center"><strong>Remplacements</strong><br> 0 demandes</div>
+        <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
+      </div>
+    <% else %>
      <div>
-        <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> infirmier a validé ta demande ! 🚀</p>
+        <div class="home-card card-validation" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <div class="rond-circle">
+            <div class="home-emoticon">
+              👏
+            </div>
+          </div>
+          <div>
+            <strong>Remplacements</strong><br> <strong><%= @replacements.size %></strong> infirmier a validé <br> ta demande !
+          </div>
+              <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
+        </div>
     </div>
-      <% end %>
+    <% end %>
 
     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Demande de remplacement</h5>
-        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="modal-body">
         <% @replacements.each do |user, replacements| %>
-          <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo</strong> <strong><%= user.first_name.capitalize %></strong> a acceptée votre demande </p>
+          <p style="font-size:20px;" data-bs-toggle="modal" data-bs-target="#exampleModal"> 🚀 <strong>Bravo</strong> <strong><%= user.first_name.capitalize %></strong> a accepté votre demande </p>
         <% end %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <div type="button" class="btn-fermer" data-bs-dismiss="modal">Fermer</div>
       </div>
     </div>
   </div>
@@ -35,34 +47,34 @@
 
 <div class="home-card card-trans">
 <div class="rond-circle">
-<div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
-  📝
+<div class="home-emoticon">
+  🩺
 </div>
 </div>
-  <div>
-    <strong>Transmissions</strong><br># 1 en attente</div>
+  <div class="text-center">
+    <strong>Transmissions</strong><br> <strong> 15</strong> transmissions</div>
     <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 
 <div class="home-card card-msg">
 <div class="rond-circle">
-  <div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
-    📩
+  <div class="home-emoticon">
+    💬
   </div>
 </div>
     <div>
-      <strong>Messages</strong><br># 1 en attente</div>
+      <strong>Messages</strong><br> <strong> 1</strong> message</div>
       <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
 </div>
 
 <div class="home-card card-actu">
   <div class="rond-circle">
-  <div class="home-emoticon", style="text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);">
-    📰
+  <div class="home-emoticon">
+    👀
   </div>
   </div>
     <div>
-      <strong>Actualités</strong><br>Tu es à jour!</div>
+      <strong>Actualités</strong><br>Tu es à jour !</div>
       <div class="mb-0 mr-fake-link"><i class="fas fa-angle-right"></i></div>
   </div>
 

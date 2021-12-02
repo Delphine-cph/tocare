@@ -3,10 +3,10 @@
 
 
     <% if @replacements.empty? %>
-    <p class="home-card text-center">You have now <strong>0</strong> replacement <i class="far fa-grin"></i></p>
+    <p class="home-card text-center">Tu n'as pas de demandes de remplacement en attente <i class="far fa-grin"></i></p>
       <% else %>
      <div>
-        <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> infirmier a validé ta demande !🚀</p>
+        <p class="home-card" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong>Bravo,</strong> <strong><%= @replacements.size %></strong> infirmier a validé ta demande ! 🚀</p>
     </div>
       <% end %>
 
@@ -15,7 +15,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Demandes de remplacement</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

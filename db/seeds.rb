@@ -274,7 +274,7 @@ patient16 = Patient.create!(
   last_name: "Perez",
   soin: "Pansement genou droit, Aide à la toilette, Chaussettes de contention, Surveillance de la tension artérielle",
   atcd: "PTG droite le 29/11/21, Hypertension artérielle",
-  treatment: "Amlor 30 (1-0-1), Paracétamol 1g si besoin toutes les 4 à 6h (si EVA > 3), Acupan si besoin 3x /jour (si EVA > 6)",
+  treatment: "Amlor 10 (1-0-1), Lovenox 0.4 s/c (0-0-1), Paracétamol 1g si besoin toutes les 4 à 6h (si EVA > 3), Acupan 20mg si besoin 3x /jour (si EVA > 6)",
   age: "87",
   birthday: "07/01/1934",
   allergy: "Iode",
@@ -287,13 +287,13 @@ patient16 = Patient.create!(
 transmission1 = Transmission.create!(
   user: user1,
   patient: patient16,
-  content: "<strong><i>2 déc. 11h41 (Victoria) - </i></strong> Nouvelle patiente, RAD ce jour. Patiente à J3 d'une PTG droite. Pansement propre et occlusif, à refaire demain. TA stable : 123/87, pouls : 86. EVA : 3, doliprane donné à 10h00, EVA à 0( 30 min après). Bonne mobilisation, kiné à domicile tous les jours."
+  content: "<strong><i>2 déc. 11h41 (Victoria) - </i></strong> Nouvelle patiente, RAD ce jour. J3 (PTG droite). <br> Pansement propre et occlusif, à refaire demain. <br> TA stable : 123/87, pouls : 86. <br> EVA : 3, doliprane donné à 10h00, EVA à 0 (30 min après). <br> Bonne mobilisation, kiné à domicile tous les jours."
 )
 
 transmission2 = Transmission.create!(
   user: user1,
   patient: patient16,
-  content: "<strong><i>3 déc. 12h41 (Victoria) -</i></strong> J4 (PTG droite). Réfection pst genou droit ce jour, plaie propre, fermée par des agrafes à enlever à J15. EVA à 0 ce jour. TA : 133/87, pouls : 89.  "
+  content: "<strong><i>3 déc. 12h41 (Victoria) -</i></strong> J4 (PTG droite). <br> Réfection pst genou droit ce jour, plaie propre, fermée par des agrafes (à ôter à J15). <br> Jambe chaude, colorée, pouls pédieux perçu.<br>EVA à 0 ce jour. TA : 133/87, pouls : 89.  "
 )
 
 replacement = Replacement.create!(
